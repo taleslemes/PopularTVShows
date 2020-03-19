@@ -20,7 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func configRootViewController() {
-        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let router = SeriesListRouter()
+        window?.rootViewController = router.makeViewController()
+        window?.makeKeyAndVisible()
     }
 
 }
