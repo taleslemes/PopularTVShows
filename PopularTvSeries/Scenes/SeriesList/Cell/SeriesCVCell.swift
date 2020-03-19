@@ -28,5 +28,33 @@ final class SeriesCVCell: UICollectionViewCell {
         posterImageView.cornerOn(.top, radius: 20)
         setShadow()
     }
+    
+    // MARK: Public Methods
+    
+    func attachViewModel(_ viewModel: SeriesCVCellViewModel) {
+        viewModel.attachView(self)
+    }
 
+}
+
+// MARK: SeriesCVCellView Interface Implementation
+
+extension SeriesCVCell: SeriesCVCellView {
+    
+    func setPosterImage(with imageName: String) {
+        
+    }
+    
+    func setTitle(with text: String) {
+        
+    }
+    
+    func setFirstAirDate(with text: String) {
+        
+    }
+    
+    func setVoteAverage(with text: String) {
+        
+    }
+    
 }

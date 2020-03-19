@@ -21,6 +21,9 @@
 		2D6F265724230887006B1D38 /* SeriesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6F265624230887006B1D38 /* SeriesListViewModel.swift */; };
 		2D6F265924230A0E006B1D38 /* StyleSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6F265824230A0E006B1D38 /* StyleSheet.swift */; };
 		2D6F265B24230F1E006B1D38 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6F265A24230F1E006B1D38 /* UIView.swift */; };
+		2DCBD295242316E30028BFE4 /* SeriesCVCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBD294242316E30028BFE4 /* SeriesCVCellViewModel.swift */; };
+		2DCBD297242317010028BFE4 /* SeriesCVCellProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBD296242317010028BFE4 /* SeriesCVCellProtocols.swift */; };
+		2DCBD2992423193E0028BFE4 /* SeriesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBD2982423193E0028BFE4 /* SeriesList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		2D6F265624230887006B1D38 /* SeriesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesListViewModel.swift; sourceTree = "<group>"; };
 		2D6F265824230A0E006B1D38 /* StyleSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleSheet.swift; sourceTree = "<group>"; };
 		2D6F265A24230F1E006B1D38 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		2DCBD294242316E30028BFE4 /* SeriesCVCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesCVCellViewModel.swift; sourceTree = "<group>"; };
+		2DCBD296242317010028BFE4 /* SeriesCVCellProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesCVCellProtocols.swift; sourceTree = "<group>"; };
+		2DCBD2982423193E0028BFE4 /* SeriesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +168,7 @@
 		2D6F26402422F35B006B1D38 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				2DCBD2982423193E0028BFE4 /* SeriesList.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -207,6 +214,8 @@
 			children = (
 				2D6F265324230503006B1D38 /* SeriesCVCell.xib */,
 				2D6F265224230503006B1D38 /* SeriesCVCell.swift */,
+				2DCBD294242316E30028BFE4 /* SeriesCVCellViewModel.swift */,
+				2DCBD296242317010028BFE4 /* SeriesCVCellProtocols.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -287,7 +296,10 @@
 			files = (
 				2D6F265B24230F1E006B1D38 /* UIView.swift in Sources */,
 				2D6F265424230503006B1D38 /* SeriesCVCell.swift in Sources */,
+				2DCBD2992423193E0028BFE4 /* SeriesList.swift in Sources */,
 				2D6F26502422FFD7006B1D38 /* UIFont.swift in Sources */,
+				2DCBD297242317010028BFE4 /* SeriesCVCellProtocols.swift in Sources */,
+				2DCBD295242316E30028BFE4 /* SeriesCVCellViewModel.swift in Sources */,
 				2D6F26222422EA17006B1D38 /* AppDelegate.swift in Sources */,
 				2D6F265724230887006B1D38 /* SeriesListViewModel.swift in Sources */,
 				2D6F26462422F4C1006B1D38 /* SeriesListViewController.swift in Sources */,
