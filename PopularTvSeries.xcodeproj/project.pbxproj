@@ -24,6 +24,9 @@
 		2DCBD295242316E30028BFE4 /* SeriesCVCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBD294242316E30028BFE4 /* SeriesCVCellViewModel.swift */; };
 		2DCBD297242317010028BFE4 /* SeriesCVCellProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBD296242317010028BFE4 /* SeriesCVCellProtocols.swift */; };
 		2DCBD2992423193E0028BFE4 /* SeriesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBD2982423193E0028BFE4 /* SeriesList.swift */; };
+		2DCBD29B24231BA40028BFE4 /* APICore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBD29A24231BA40028BFE4 /* APICore.swift */; };
+		2DCBD29D24231BEE0028BFE4 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBD29C24231BEE0028BFE4 /* AppError.swift */; };
+		2DCBD29F24231C890028BFE4 /* Paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBD29E24231C890028BFE4 /* Paths.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,9 @@
 		2DCBD294242316E30028BFE4 /* SeriesCVCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesCVCellViewModel.swift; sourceTree = "<group>"; };
 		2DCBD296242317010028BFE4 /* SeriesCVCellProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesCVCellProtocols.swift; sourceTree = "<group>"; };
 		2DCBD2982423193E0028BFE4 /* SeriesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesList.swift; sourceTree = "<group>"; };
+		2DCBD29A24231BA40028BFE4 /* APICore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICore.swift; sourceTree = "<group>"; };
+		2DCBD29C24231BEE0028BFE4 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		2DCBD29E24231C890028BFE4 /* Paths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paths.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +86,8 @@
 			children = (
 				2D6F26362422F249006B1D38 /* App */,
 				2D6F263F2422F315006B1D38 /* API */,
-				2D6F26402422F35B006B1D38 /* Entities */,
 				2D6F263B2422F2B3006B1D38 /* Errors */,
+				2D6F26402422F35B006B1D38 /* Entities */,
 				2D6F26372422F25B006B1D38 /* Scenes */,
 				2D6F26412422F392006B1D38 /* Core */,
 				2D6F263A2422F29C006B1D38 /* Extensions */,
@@ -138,6 +144,7 @@
 		2D6F263B2422F2B3006B1D38 /* Errors */ = {
 			isa = PBXGroup;
 			children = (
+				2DCBD29C24231BEE0028BFE4 /* AppError.swift */,
 			);
 			path = Errors;
 			sourceTree = "<group>";
@@ -161,6 +168,8 @@
 		2D6F263F2422F315006B1D38 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				2DCBD29A24231BA40028BFE4 /* APICore.swift */,
+				2DCBD29E24231C890028BFE4 /* Paths.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -294,13 +303,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DCBD29F24231C890028BFE4 /* Paths.swift in Sources */,
 				2D6F265B24230F1E006B1D38 /* UIView.swift in Sources */,
 				2D6F265424230503006B1D38 /* SeriesCVCell.swift in Sources */,
 				2DCBD2992423193E0028BFE4 /* SeriesList.swift in Sources */,
 				2D6F26502422FFD7006B1D38 /* UIFont.swift in Sources */,
+				2DCBD29D24231BEE0028BFE4 /* AppError.swift in Sources */,
 				2DCBD297242317010028BFE4 /* SeriesCVCellProtocols.swift in Sources */,
 				2DCBD295242316E30028BFE4 /* SeriesCVCellViewModel.swift in Sources */,
 				2D6F26222422EA17006B1D38 /* AppDelegate.swift in Sources */,
+				2DCBD29B24231BA40028BFE4 /* APICore.swift in Sources */,
 				2D6F265724230887006B1D38 /* SeriesListViewModel.swift in Sources */,
 				2D6F26462422F4C1006B1D38 /* SeriesListViewController.swift in Sources */,
 				2D6F26492422F50B006B1D38 /* SeriesListRouter.swift in Sources */,
