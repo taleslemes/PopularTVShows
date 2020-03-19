@@ -9,18 +9,21 @@
 import Foundation
 
 struct SeriesResponse: Decodable {
-    let results: [SeriesList]
+    let results: [Serie]
 }
 
-struct SeriesList: Decodable {
+struct Serie: Decodable {
     let id: Int
     let image: String
-    let name: String
+    let title: String
     let firstAirDate: String
+    let voteAverage: Double
     
     enum CodingKeys: String, CodingKey {
-        case id, name
+        case id
+        case title = "name"
         case image = "poster_path"
         case firstAirDate = "first_air_date"
+        case voteAverage = "vote_average"
     }
 }

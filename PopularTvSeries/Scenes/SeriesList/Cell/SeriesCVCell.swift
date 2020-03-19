@@ -42,19 +42,19 @@ final class SeriesCVCell: UICollectionViewCell {
 extension SeriesCVCell: SeriesCVCellView {
     
     func setPosterImage(with imageName: String) {
-        
+        posterImageView.loadImage(from: imageName)
     }
     
     func setTitle(with text: String) {
-        
+        titleLabel.text = text
     }
     
     func setFirstAirDate(with text: String) {
-        
+        firstAirDateLabel.text = text
     }
     
     func setVoteAverage(with text: String) {
-        
+        voteAverageLabel.text = text
     }
     
 }

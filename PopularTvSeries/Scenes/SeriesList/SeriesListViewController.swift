@@ -28,6 +28,7 @@ final class SeriesListViewController: UIViewController {
     init(viewModel: SeriesListViewModel) {
         self.viewModel = viewModel
         super.init(nibName: "SeriesListViewController", bundle: nil)
+        viewModel.view = self
     }
     
     @available(*, unavailable)
@@ -39,6 +40,7 @@ final class SeriesListViewController: UIViewController {
         super.viewDidLoad()
         
         setupCollectionView()
+        viewModel.viewDidLoad()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -70,13 +72,17 @@ final class SeriesListViewController: UIViewController {
 extension SeriesListViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return viewModel.series.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SeriesCVCell.identifier, for: indexPath) as? SeriesCVCell else { return UICollectionViewCell() }
         
-
+        let cellModel = viewModel.series[indexPath.row]
+        let cellViewModel = SeriesCVCellViewModel(model: cellModel)
+        
+        cell.attachViewModel(cellViewModel)
+        
         return cell
     }
     
@@ -99,5 +105,29 @@ extension SeriesListViewController: UICollectionViewDelegateFlowLayout {
 }
 
 extension SeriesListViewController: UICollectionViewDelegate {
+    
+}
+
+// MARK: SeriesListView Interface Implementation
+
+extension SeriesListViewController: SeriesListView {
+    
+    func showLoader() {
+        Loader.show(in: self)
+    }
+    
+    func hideLoader() {
+        Loader.hide()
+    }
+    
+    func showError(message: String) {
+        showAlert(message: message)
+    }
+    
+    func updateSeriesList() {
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
+    }
     
 }

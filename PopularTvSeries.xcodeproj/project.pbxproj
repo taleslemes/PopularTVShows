@@ -23,10 +23,17 @@
 		2D6F265B24230F1E006B1D38 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6F265A24230F1E006B1D38 /* UIView.swift */; };
 		2DCBD295242316E30028BFE4 /* SeriesCVCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBD294242316E30028BFE4 /* SeriesCVCellViewModel.swift */; };
 		2DCBD297242317010028BFE4 /* SeriesCVCellProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBD296242317010028BFE4 /* SeriesCVCellProtocols.swift */; };
-		2DCBD2992423193E0028BFE4 /* SeriesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBD2982423193E0028BFE4 /* SeriesList.swift */; };
+		2DCBD2992423193E0028BFE4 /* Serie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBD2982423193E0028BFE4 /* Serie.swift */; };
 		2DCBD29B24231BA40028BFE4 /* APICore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBD29A24231BA40028BFE4 /* APICore.swift */; };
 		2DCBD29D24231BEE0028BFE4 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBD29C24231BEE0028BFE4 /* AppError.swift */; };
 		2DCBD29F24231C890028BFE4 /* Paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBD29E24231C890028BFE4 /* Paths.swift */; };
+		2DCBD2A124231F740028BFE4 /* SeriesListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBD2A024231F740028BFE4 /* SeriesListService.swift */; };
+		2DCBD2A324231F880028BFE4 /* SeriesListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBD2A224231F880028BFE4 /* SeriesListProtocols.swift */; };
+		2DCBD2A5242327380028BFE4 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBD2A4242327380028BFE4 /* UIViewController.swift */; };
+		2DCBD2A7242327850028BFE4 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBD2A6242327850028BFE4 /* Loader.swift */; };
+		2DCBD2A9242327AD0028BFE4 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBD2A8242327AD0028BFE4 /* ActivityIndicator.swift */; };
+		2DCBD2AC24232BAA0028BFE4 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBD2AB24232BAA0028BFE4 /* UIImageView.swift */; };
+		2DCBD2AE24232E080028BFE4 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBD2AD24232E080028BFE4 /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,10 +55,17 @@
 		2D6F265A24230F1E006B1D38 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		2DCBD294242316E30028BFE4 /* SeriesCVCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesCVCellViewModel.swift; sourceTree = "<group>"; };
 		2DCBD296242317010028BFE4 /* SeriesCVCellProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesCVCellProtocols.swift; sourceTree = "<group>"; };
-		2DCBD2982423193E0028BFE4 /* SeriesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesList.swift; sourceTree = "<group>"; };
+		2DCBD2982423193E0028BFE4 /* Serie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serie.swift; sourceTree = "<group>"; };
 		2DCBD29A24231BA40028BFE4 /* APICore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICore.swift; sourceTree = "<group>"; };
 		2DCBD29C24231BEE0028BFE4 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		2DCBD29E24231C890028BFE4 /* Paths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paths.swift; sourceTree = "<group>"; };
+		2DCBD2A024231F740028BFE4 /* SeriesListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesListService.swift; sourceTree = "<group>"; };
+		2DCBD2A224231F880028BFE4 /* SeriesListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesListProtocols.swift; sourceTree = "<group>"; };
+		2DCBD2A4242327380028BFE4 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		2DCBD2A6242327850028BFE4 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		2DCBD2A8242327AD0028BFE4 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		2DCBD2AB24232BAA0028BFE4 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		2DCBD2AD24232E080028BFE4 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +142,7 @@
 		2D6F26392422F28C006B1D38 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				2DCBD2AA242327E80028BFE4 /* Loader */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -152,6 +167,7 @@
 		2D6F263C2422F2EB006B1D38 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				2DCBD2AD24232E080028BFE4 /* String.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -161,6 +177,8 @@
 			children = (
 				2D6F264F2422FFD7006B1D38 /* UIFont.swift */,
 				2D6F265A24230F1E006B1D38 /* UIView.swift */,
+				2DCBD2A4242327380028BFE4 /* UIViewController.swift */,
+				2DCBD2AB24232BAA0028BFE4 /* UIImageView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -177,7 +195,7 @@
 		2D6F26402422F35B006B1D38 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				2DCBD2982423193E0028BFE4 /* SeriesList.swift */,
+				2DCBD2982423193E0028BFE4 /* Serie.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -204,7 +222,9 @@
 				2D6F26452422F4C1006B1D38 /* SeriesListViewController.xib */,
 				2D6F26442422F4C1006B1D38 /* SeriesListViewController.swift */,
 				2D6F265624230887006B1D38 /* SeriesListViewModel.swift */,
+				2DCBD2A024231F740028BFE4 /* SeriesListService.swift */,
 				2D6F26482422F50B006B1D38 /* SeriesListRouter.swift */,
+				2DCBD2A224231F880028BFE4 /* SeriesListProtocols.swift */,
 			);
 			path = SeriesList;
 			sourceTree = "<group>";
@@ -227,6 +247,15 @@
 				2DCBD296242317010028BFE4 /* SeriesCVCellProtocols.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		2DCBD2AA242327E80028BFE4 /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				2DCBD2A6242327850028BFE4 /* Loader.swift */,
+				2DCBD2A8242327AD0028BFE4 /* ActivityIndicator.swift */,
+			);
+			path = Loader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,18 +332,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DCBD2A324231F880028BFE4 /* SeriesListProtocols.swift in Sources */,
 				2DCBD29F24231C890028BFE4 /* Paths.swift in Sources */,
+				2DCBD2A9242327AD0028BFE4 /* ActivityIndicator.swift in Sources */,
 				2D6F265B24230F1E006B1D38 /* UIView.swift in Sources */,
 				2D6F265424230503006B1D38 /* SeriesCVCell.swift in Sources */,
-				2DCBD2992423193E0028BFE4 /* SeriesList.swift in Sources */,
+				2DCBD2992423193E0028BFE4 /* Serie.swift in Sources */,
 				2D6F26502422FFD7006B1D38 /* UIFont.swift in Sources */,
 				2DCBD29D24231BEE0028BFE4 /* AppError.swift in Sources */,
 				2DCBD297242317010028BFE4 /* SeriesCVCellProtocols.swift in Sources */,
+				2DCBD2A7242327850028BFE4 /* Loader.swift in Sources */,
+				2DCBD2A5242327380028BFE4 /* UIViewController.swift in Sources */,
 				2DCBD295242316E30028BFE4 /* SeriesCVCellViewModel.swift in Sources */,
 				2D6F26222422EA17006B1D38 /* AppDelegate.swift in Sources */,
+				2DCBD2A124231F740028BFE4 /* SeriesListService.swift in Sources */,
 				2DCBD29B24231BA40028BFE4 /* APICore.swift in Sources */,
 				2D6F265724230887006B1D38 /* SeriesListViewModel.swift in Sources */,
+				2DCBD2AC24232BAA0028BFE4 /* UIImageView.swift in Sources */,
 				2D6F26462422F4C1006B1D38 /* SeriesListViewController.swift in Sources */,
+				2DCBD2AE24232E080028BFE4 /* String.swift in Sources */,
 				2D6F26492422F50B006B1D38 /* SeriesListRouter.swift in Sources */,
 				2D6F265924230A0E006B1D38 /* StyleSheet.swift in Sources */,
 			);

@@ -9,12 +9,12 @@
 import Foundation
 
 protocol APIProvider: AnyObject {
-    func request<T>(url: String, success: @escaping (T) -> Void, failure: @escaping (Error) -> Void) where T : Decodable
+    func request<T>(url: String, success: @escaping (T) -> Void, failure: @escaping (AppError) -> Void) where T : Decodable
 }
 
 final class APICore: APIProvider {
     
-    func request<T>(url: String, success: @escaping (T) -> Void, failure: @escaping (Error) -> Void) where T : Decodable {
+    func request<T>(url: String, success: @escaping (T) -> Void, failure: @escaping (AppError) -> Void) where T : Decodable {
         guard let request = makeRequest(url: url) else { return }
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
