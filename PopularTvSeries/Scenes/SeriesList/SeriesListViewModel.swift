@@ -10,4 +10,8 @@ import Foundation
 
 final class SeriesListViewModel {
     
+    // MARK: Properties
+    
+    let title = "Popular TV Series"
+    
 }

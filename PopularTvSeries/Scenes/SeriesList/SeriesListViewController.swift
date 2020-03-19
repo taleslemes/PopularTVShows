@@ -52,7 +52,7 @@ final class SeriesListViewController: UIViewController {
     private func setupNavigationBar() {
         navigationController?.navigationBar.barTintColor = .customGreen
         navigationController?.navigationBar.barStyle = .black
-        navigationItem.title = "Popular TV Series"
+        navigationItem.title = viewModel.title
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white, .font: UIFont.IBMPlexSans(withWeight: .bold, size: 28)]
     }
     
@@ -60,6 +60,7 @@ final class SeriesListViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: "SeriesCVCell", bundle: nil), forCellWithReuseIdentifier: SeriesCVCell.identifier)
+        collectionView.backgroundColor = .clear
     }
     
 }
@@ -75,7 +76,7 @@ extension SeriesListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SeriesCVCell.identifier, for: indexPath) as? SeriesCVCell else { return UICollectionViewCell() }
         
-        cell.backgroundColor = .systemBlue
+
         return cell
     }
     
