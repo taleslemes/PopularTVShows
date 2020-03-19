@@ -11,7 +11,8 @@ import UIKit
 final class SeriesListRouter {
     
     func makeViewController() -> UINavigationController {
-        let viewController = SeriesListViewController()
+        let viewModel = SeriesListViewModel()
+        let viewController = SeriesListViewController(viewModel: viewModel)
         let navigationController = UINavigationController(rootViewController: viewController)
         
         return navigationController

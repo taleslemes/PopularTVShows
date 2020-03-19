@@ -13,6 +13,13 @@
 		2D6F26462422F4C1006B1D38 /* SeriesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6F26442422F4C1006B1D38 /* SeriesListViewController.swift */; };
 		2D6F26472422F4C1006B1D38 /* SeriesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D6F26452422F4C1006B1D38 /* SeriesListViewController.xib */; };
 		2D6F26492422F50B006B1D38 /* SeriesListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6F26482422F50B006B1D38 /* SeriesListRouter.swift */; };
+		2D6F264D2422FB9D006B1D38 /* IBMPlexSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D6F264B2422FB9D006B1D38 /* IBMPlexSans-Bold.ttf */; };
+		2D6F264E2422FB9D006B1D38 /* IBMPlexSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D6F264C2422FB9D006B1D38 /* IBMPlexSans-Regular.ttf */; };
+		2D6F26502422FFD7006B1D38 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6F264F2422FFD7006B1D38 /* UIFont.swift */; };
+		2D6F265424230503006B1D38 /* SeriesCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6F265224230503006B1D38 /* SeriesCVCell.swift */; };
+		2D6F265524230503006B1D38 /* SeriesCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D6F265324230503006B1D38 /* SeriesCVCell.xib */; };
+		2D6F265724230887006B1D38 /* SeriesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6F265624230887006B1D38 /* SeriesListViewModel.swift */; };
+		2D6F265924230A0E006B1D38 /* StyleSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6F265824230A0E006B1D38 /* StyleSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		2D6F26442422F4C1006B1D38 /* SeriesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesListViewController.swift; sourceTree = "<group>"; };
 		2D6F26452422F4C1006B1D38 /* SeriesListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeriesListViewController.xib; sourceTree = "<group>"; };
 		2D6F26482422F50B006B1D38 /* SeriesListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesListRouter.swift; sourceTree = "<group>"; };
+		2D6F264B2422FB9D006B1D38 /* IBMPlexSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-Bold.ttf"; sourceTree = "<group>"; };
+		2D6F264C2422FB9D006B1D38 /* IBMPlexSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-Regular.ttf"; sourceTree = "<group>"; };
+		2D6F264F2422FFD7006B1D38 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		2D6F265224230503006B1D38 /* SeriesCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesCVCell.swift; sourceTree = "<group>"; };
+		2D6F265324230503006B1D38 /* SeriesCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeriesCVCell.xib; sourceTree = "<group>"; };
+		2D6F265624230887006B1D38 /* SeriesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesListViewModel.swift; sourceTree = "<group>"; };
+		2D6F265824230A0E006B1D38 /* StyleSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +86,7 @@
 		2D6F26352422F114006B1D38 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2D6F264A2422FB54006B1D38 /* Fonts */,
 				2D6F262A2422EA1E006B1D38 /* Assets.xcassets */,
 				2D6F262C2422EA1E006B1D38 /* LaunchScreen.storyboard */,
 				2D6F262F2422EA1E006B1D38 /* Info.plist */,
@@ -129,6 +144,7 @@
 		2D6F263D2422F2F4006B1D38 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				2D6F264F2422FFD7006B1D38 /* UIFont.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -150,6 +166,7 @@
 		2D6F26412422F392006B1D38 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				2D6F265824230A0E006B1D38 /* StyleSheet.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -164,11 +181,31 @@
 		2D6F26432422F470006B1D38 /* SeriesList */ = {
 			isa = PBXGroup;
 			children = (
+				2D6F2651242304DF006B1D38 /* Cell */,
 				2D6F26452422F4C1006B1D38 /* SeriesListViewController.xib */,
 				2D6F26442422F4C1006B1D38 /* SeriesListViewController.swift */,
+				2D6F265624230887006B1D38 /* SeriesListViewModel.swift */,
 				2D6F26482422F50B006B1D38 /* SeriesListRouter.swift */,
 			);
 			path = SeriesList;
+			sourceTree = "<group>";
+		};
+		2D6F264A2422FB54006B1D38 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2D6F264B2422FB9D006B1D38 /* IBMPlexSans-Bold.ttf */,
+				2D6F264C2422FB9D006B1D38 /* IBMPlexSans-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		2D6F2651242304DF006B1D38 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2D6F265224230503006B1D38 /* SeriesCVCell.swift */,
+				2D6F265324230503006B1D38 /* SeriesCVCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,7 +266,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D6F264D2422FB9D006B1D38 /* IBMPlexSans-Bold.ttf in Resources */,
 				2D6F262E2422EA1E006B1D38 /* LaunchScreen.storyboard in Resources */,
+				2D6F264E2422FB9D006B1D38 /* IBMPlexSans-Regular.ttf in Resources */,
+				2D6F265524230503006B1D38 /* SeriesCVCell.xib in Resources */,
 				2D6F262B2422EA1E006B1D38 /* Assets.xcassets in Resources */,
 				2D6F26472422F4C1006B1D38 /* SeriesListViewController.xib in Resources */,
 			);
@@ -242,9 +282,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D6F265424230503006B1D38 /* SeriesCVCell.swift in Sources */,
+				2D6F26502422FFD7006B1D38 /* UIFont.swift in Sources */,
 				2D6F26222422EA17006B1D38 /* AppDelegate.swift in Sources */,
+				2D6F265724230887006B1D38 /* SeriesListViewModel.swift in Sources */,
 				2D6F26462422F4C1006B1D38 /* SeriesListViewController.swift in Sources */,
 				2D6F26492422F50B006B1D38 /* SeriesListRouter.swift in Sources */,
+				2D6F265924230A0E006B1D38 /* StyleSheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
