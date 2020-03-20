@@ -5,7 +5,7 @@ An app which shows popular TV Shows and their details
 
 ### MVVM
 Model-View-ViewModel architectural pattern is used in this project.
-In order to access the remote data each scene has a Service Layer.
+In order to access the remote data a Service Layer is used.
 The app navigation is handled using a Router component.
 
 ## External Dependencies
