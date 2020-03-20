@@ -34,6 +34,7 @@
 		2DCBD2A9242327AD0028BFE4 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBD2A8242327AD0028BFE4 /* ActivityIndicator.swift */; };
 		2DCBD2AC24232BAA0028BFE4 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBD2AB24232BAA0028BFE4 /* UIImageView.swift */; };
 		2DCBD2AE24232E080028BFE4 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBD2AD24232E080028BFE4 /* String.swift */; };
+		2DCBD2B02423333E0028BFE4 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBD2AF2423333E0028BFE4 /* Device.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		2DCBD2A8242327AD0028BFE4 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		2DCBD2AB24232BAA0028BFE4 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		2DCBD2AD24232E080028BFE4 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		2DCBD2AF2423333E0028BFE4 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				2D6F265824230A0E006B1D38 /* StyleSheet.swift */,
+				2DCBD2AF2423333E0028BFE4 /* Device.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				2DCBD297242317010028BFE4 /* SeriesCVCellProtocols.swift in Sources */,
 				2DCBD2A7242327850028BFE4 /* Loader.swift in Sources */,
 				2DCBD2A5242327380028BFE4 /* UIViewController.swift in Sources */,
+				2DCBD2B02423333E0028BFE4 /* Device.swift in Sources */,
 				2DCBD295242316E30028BFE4 /* SeriesCVCellViewModel.swift in Sources */,
 				2D6F26222422EA17006B1D38 /* AppDelegate.swift in Sources */,
 				2DCBD2A124231F740028BFE4 /* SeriesListService.swift in Sources */,

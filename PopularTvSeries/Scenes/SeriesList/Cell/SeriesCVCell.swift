@@ -16,6 +16,7 @@ final class SeriesCVCell: UICollectionViewCell {
     @IBOutlet private weak var firstAirDateLabel: UILabel!
     @IBOutlet private weak var voteAverageLabel: UILabel!
     @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var posterImageViewHeightConstraint: NSLayoutConstraint!
     
     static let identifier = "seriesCVCell"
     
@@ -27,6 +28,11 @@ final class SeriesCVCell: UICollectionViewCell {
         cornerOn(.all, radius: 20)
         posterImageView.cornerOn(.top, radius: 20)
         setShadow()
+        
+        if Device.isIphoneSE {
+            posterImageViewHeightConstraint.isActive = false
+            print(frame.height)
+        }
     }
     
     // MARK: Public Methods

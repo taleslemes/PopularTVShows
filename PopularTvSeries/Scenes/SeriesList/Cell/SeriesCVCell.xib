@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
@@ -19,32 +19,35 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SeriesCVCell" customModule="PopularTvSeries" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="295" height="365"/>
+            <rect key="frame" x="0.0" y="0.0" width="243" height="377"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="295" height="365"/>
+                <rect key="frame" x="0.0" y="0.0" width="243" height="377"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rwb-Fa-u78">
-                        <rect key="frame" x="0.0" y="0.0" width="295" height="255.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="243" height="264"/>
+                        <constraints>
+                            <constraint firstAttribute="height" priority="999" constant="150" id="l14-ib-r7g"/>
+                        </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Amazing Spider-Man" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3Yd-Fc-Ri7">
-                        <rect key="frame" x="10" y="260.5" width="275" height="23.5"/>
-                        <fontDescription key="fontDescription" name="IBMPlexSans-Bold" family="IBM Plex Sans" pointSize="18"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="249" text="                                            " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" enabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Yd-Fc-Ri7">
+                        <rect key="frame" x="10" y="269" width="223" height="21"/>
+                        <fontDescription key="fontDescription" name="IBMPlexSans-Bold" family="IBM Plex Sans" pointSize="16"/>
                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oyD-Ew-xJM">
-                        <rect key="frame" x="10" y="299" width="164.5" height="47"/>
+                        <rect key="frame" x="10" y="300.5" width="109.5" height="47"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Vote average: 8.0" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="6sp-7y-8Zb">
-                                <rect key="frame" x="0.0" y="0.0" width="164.5" height="18.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="749" text="                                 " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="6sp-7y-8Zb">
+                                <rect key="frame" x="0.0" y="0.0" width="109.5" height="18.5"/>
                                 <fontDescription key="fontDescription" name="IBMPlexSans" family="IBM Plex Sans" pointSize="14"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="748" text="First air date: 27/10/1994" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VU6-5B-7YV">
-                                <rect key="frame" x="0.0" y="28.5" width="164.5" height="18.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="                              " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VU6-5B-7YV">
+                                <rect key="frame" x="0.0" y="28.5" width="109.5" height="18.5"/>
                                 <fontDescription key="fontDescription" name="IBMPlexSans" family="IBM Plex Sans" pointSize="14"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -57,24 +60,25 @@
             <constraints>
                 <constraint firstItem="rwb-Fa-u78" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="4aW-dp-V8T"/>
                 <constraint firstItem="rwb-Fa-u78" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.7" id="5eR-fg-e16"/>
-                <constraint firstItem="oyD-Ew-xJM" firstAttribute="top" secondItem="3Yd-Fc-Ri7" secondAttribute="bottom" constant="15" id="LqH-Mc-2PR"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="oyD-Ew-xJM" secondAttribute="bottom" constant="5" id="I9o-5W-Ezi"/>
                 <constraint firstAttribute="trailing" secondItem="3Yd-Fc-Ri7" secondAttribute="trailing" constant="10" id="UAP-gw-5MC"/>
                 <constraint firstItem="3Yd-Fc-Ri7" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="Y37-1q-nUM"/>
                 <constraint firstAttribute="trailing" secondItem="rwb-Fa-u78" secondAttribute="trailing" id="bIT-kM-C6e"/>
                 <constraint firstItem="rwb-Fa-u78" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="cnn-F4-d4K"/>
                 <constraint firstItem="oyD-Ew-xJM" firstAttribute="leading" secondItem="3Yd-Fc-Ri7" secondAttribute="leading" id="fEa-LA-4oK"/>
-                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="oyD-Ew-xJM" secondAttribute="bottom" constant="5" id="iJT-Gv-dKd"/>
                 <constraint firstItem="3Yd-Fc-Ri7" firstAttribute="top" secondItem="rwb-Fa-u78" secondAttribute="bottom" constant="5" id="idw-nd-m20"/>
+                <constraint firstItem="oyD-Ew-xJM" firstAttribute="top" secondItem="3Yd-Fc-Ri7" secondAttribute="bottom" constant="10.5" id="xgz-NX-Zhl"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="295" height="365"/>
+            <size key="customSize" width="243" height="377"/>
             <connections>
                 <outlet property="firstAirDateLabel" destination="VU6-5B-7YV" id="uBG-Ww-2Zq"/>
                 <outlet property="posterImageView" destination="rwb-Fa-u78" id="ygt-0D-sNk"/>
+                <outlet property="posterImageViewHeightConstraint" destination="5eR-fg-e16" id="mDm-fV-b0X"/>
                 <outlet property="titleLabel" destination="3Yd-Fc-Ri7" id="4W0-sf-eiT"/>
                 <outlet property="voteAverageLabel" destination="6sp-7y-8Zb" id="fgI-nB-P8D"/>
             </connections>
-            <point key="canvasLocation" x="265.94202898550725" y="118.86160714285714"/>
+            <point key="canvasLocation" x="218.4375" y="93.485915492957744"/>
         </collectionViewCell>
     </objects>
 </document>

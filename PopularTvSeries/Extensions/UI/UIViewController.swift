@@ -11,11 +11,10 @@ import UIKit
 extension UIViewController {
     
     func showAlert(title: String = "Ops...", message: String) {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
-        alertController.addAction(alertAction)
-        
         DispatchQueue.main.async {
+            let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            let alertAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            alertController.addAction(alertAction)
             self.present(alertController, animated: true, completion: nil)
         }
     }

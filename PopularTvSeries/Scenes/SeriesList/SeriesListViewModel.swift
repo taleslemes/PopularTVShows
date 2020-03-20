@@ -13,8 +13,10 @@ final class SeriesListViewModel {
     // MARK: Properties
     
     let title = "Popular TV Series"
-    var page = 1
     var series = [Serie]()
+    
+    var currentPage: Int = 1
+    var isLoadingList: Bool = false
     
     private let service: SeriesListServiceInput
     weak var view: SeriesListView?
@@ -30,7 +32,12 @@ final class SeriesListViewModel {
     
     func viewDidLoad() {
         view?.showLoader()
-        service.fetchPopularSeries(page: page)
+        fetchPopularSeries(currentPage: currentPage)
+        currentPage += 1
+    }
+    
+    func fetchPopularSeries(currentPage: Int) {
+        service.fetchPopularSeries(page: currentPage)
     }
     
 }
@@ -40,7 +47,10 @@ final class SeriesListViewModel {
 extension SeriesListViewModel: SeriesListServiceOutput {
     
     func fetchPopularSeriesSucceeded(series: [Serie]) {
-        self.series = series
+        for serie in series {
+            self.series.append(serie)
+        }
+        
         view?.hideLoader()
         view?.updateSeriesList()
     }

@@ -54,7 +54,7 @@ final class SeriesListViewController: UIViewController {
     private func setupNavigationBar() {
         navigationController?.navigationBar.barTintColor = .customGreen
         navigationController?.navigationBar.barStyle = .black
-        navigationItem.title = viewModel.title
+        title = viewModel.title
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white, .font: UIFont.IBMPlexSans(withWeight: .bold, size: 28)]
     }
     
@@ -105,6 +105,31 @@ extension SeriesListViewController: UICollectionViewDelegateFlowLayout {
 }
 
 extension SeriesListViewController: UICollectionViewDelegate {
+    
+}
+
+// MARK: ScrollView Interface Implementation
+
+extension SeriesListViewController: UIScrollViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        
+        /// Here we check where the user is in the Y axis
+        if offsetY / contentHeight > 0.7 && !viewModel.isLoadingList {
+            viewModel.isLoadingList = true
+            getMoreSeriesFromServer(viewModel.currentPage)
+        }
+    }
+    
+    /// This method is used to fetch TV Series data found in another page provided by the API (pagination)
+    private func getMoreSeriesFromServer(_ pageNumber: Int) {
+        viewModel.fetchPopularSeries(currentPage: viewModel.currentPage)
+        viewModel.isLoadingList = false
+        viewModel.currentPage += 1
+    }
     
 }
 
