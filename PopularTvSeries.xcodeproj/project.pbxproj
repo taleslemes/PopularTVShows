@@ -42,6 +42,7 @@
 		2DCBD2BA24246B190028BFE4 /* SerieDetailsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBD2B924246B190028BFE4 /* SerieDetailsProtocols.swift */; };
 		2DCBD2BC24246C030028BFE4 /* SerieDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBD2BB24246C030028BFE4 /* SerieDetails.swift */; };
 		2DCBD2BE242470A90028BFE4 /* SerieDetailsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBD2BD242470A90028BFE4 /* SerieDetailsService.swift */; };
+		2DCBD2C024248E160028BFE4 /* SimilarSerie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBD2BF24248E160028BFE4 /* SimilarSerie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		2DCBD2B924246B190028BFE4 /* SerieDetailsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieDetailsProtocols.swift; sourceTree = "<group>"; };
 		2DCBD2BB24246C030028BFE4 /* SerieDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieDetails.swift; sourceTree = "<group>"; };
 		2DCBD2BD242470A90028BFE4 /* SerieDetailsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieDetailsService.swift; sourceTree = "<group>"; };
+		2DCBD2BF24248E160028BFE4 /* SimilarSerie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimilarSerie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +215,7 @@
 			children = (
 				2DCBD2982423193E0028BFE4 /* Serie.swift */,
 				2DCBD2BB24246C030028BFE4 /* SerieDetails.swift */,
+				2DCBD2BF24248E160028BFE4 /* SimilarSerie.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 				2DCBD2B324246A170028BFE4 /* SerieDetailsViewController.swift in Sources */,
 				2DCBD2B02423333E0028BFE4 /* Device.swift in Sources */,
 				2DCBD295242316E30028BFE4 /* SeriesCVCellViewModel.swift in Sources */,
+				2DCBD2C024248E160028BFE4 /* SimilarSerie.swift in Sources */,
 				2D6F26222422EA17006B1D38 /* AppDelegate.swift in Sources */,
 				2DCBD2A124231F740028BFE4 /* SeriesListService.swift in Sources */,
 				2DCBD2BA24246B190028BFE4 /* SerieDetailsProtocols.swift in Sources */,

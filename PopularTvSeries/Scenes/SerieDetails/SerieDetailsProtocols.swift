@@ -10,12 +10,15 @@ import Foundation
 
 protocol SeriesDetailsServiceInput: AnyObject {
     func fetchSerieDetails()
+    func fetchSimilarSeries()
     var output: SeriesDetailsServiceOutput? { get set }
 }
 
 protocol SeriesDetailsServiceOutput: AnyObject {
     func fetchSerieDetailsSucceeded(serieDetails: SerieDetails)
     func fetchSerieDetailsFailed(error: AppError)
+    func fetchSimilarSeriesSucceeded(similarSeries: [SimilarSerie])
+    func fetchSimilarSeriesFailed(error: AppError)
 }
 
 protocol SeriesDetailsView: AnyObject {
@@ -28,5 +31,5 @@ protocol SeriesDetailsView: AnyObject {
     func setOverview(with text: String)
     func setTitle(with text: String)
     func setGenres(with text: String)
-    
+    func setSimilarSeries(with text: String)
 }

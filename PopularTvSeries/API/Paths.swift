@@ -14,4 +14,6 @@ enum Urls {
     static let imageBase = "https://image.tmdb.org/t/p/w500/"
     static let serieDetailsPart1 = "https://api.themoviedb.org/3/tv/"
     static let serieDetailsPart2 = "?api_key=" + Urls.apiKey + "&language=en-US"
+    static let similarSeriesPart1 = "https://api.themoviedb.org/3/tv/"
+    static let similarSeriesPart2 = "/similar?api_key=" + Urls.apiKey + "&language=en-US&page=1"
 }

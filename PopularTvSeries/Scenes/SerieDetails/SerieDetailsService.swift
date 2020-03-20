@@ -27,4 +27,12 @@ final class SerieDetailsService: SeriesDetailsServiceInput {
         }
     }
     
+    func fetchSimilarSeries() {
+        api.request(url: Urls.similarSeriesPart1 + "\(serieId)" + Urls.similarSeriesPart2, success: { [output]  (similarSeries: SimilarSeriesResponse) in
+            output?.fetchSimilarSeriesSucceeded(similarSeries: similarSeries.results)
+        }) { [output] (error) in
+            output?.fetchSerieDetailsFailed(error: error)
+        }
+    }
+    
 }

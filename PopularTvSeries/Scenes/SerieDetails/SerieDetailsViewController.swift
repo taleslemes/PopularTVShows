@@ -16,6 +16,7 @@ final class SerieDetailsViewController: UIViewController {
     @IBOutlet private weak var overviewLabel: UILabel!
     @IBOutlet private weak var firstAirDateLabel: UILabel!
     @IBOutlet private weak var genreLabel: UILabel!
+    @IBOutlet private weak var similarSeriesLabel: UILabel!
     
     private let viewModel: SerieDetailsViewModel
     
@@ -113,6 +114,12 @@ extension SerieDetailsViewController: SeriesDetailsView {
     func setGenres(with text: String) {
         DispatchQueue.main.async {
             self.genreLabel.text = text
+        }
+    }
+    
+    func setSimilarSeries(with text: String) {
+        DispatchQueue.main.async {
+            self.similarSeriesLabel.text = text
         }
     }
     

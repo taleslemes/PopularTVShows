@@ -29,6 +29,7 @@ final class SerieDetailsViewModel {
     func viewDidLoad() {
         view?.showLoader()
         service.fetchSerieDetails()
+        service.fetchSimilarSeries()
     }
     
 }
@@ -37,9 +38,26 @@ final class SerieDetailsViewModel {
 
 extension SerieDetailsViewModel: SeriesDetailsServiceOutput {
     
-    func fetchSerieDetailsSucceeded(serieDetails: SerieDetails) {
+    func fetchSimilarSeriesSucceeded(similarSeries: [SimilarSerie]) {
+        
+        /// getting similar TV Shows information from server takes a little longer, therefore the loader should disappear after it is succeeded
         view?.hideLoader()
         
+        var seriesArray = [String]()
+        for serie in similarSeries {
+            seriesArray.append(serie.title)
+        }
+        let similarSeries = seriesArray.joined(separator: ", ")
+        
+        view?.setSimilarSeries(with: "Similar TV Shows: \(similarSeries)")
+    }
+    
+    func fetchSimilarSeriesFailed(error: AppError) {
+        view?.hideLoader()
+        view?.showError(message: error.description)
+    }
+        
+    func fetchSerieDetailsSucceeded(serieDetails: SerieDetails) {
         view?.setTitle(with: serieDetails.title)
         view?.setPosterImage(with: Urls.imageBase + serieDetails.image)
         view?.setOverview(with: serieDetails.overview)
