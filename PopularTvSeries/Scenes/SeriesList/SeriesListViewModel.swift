@@ -19,12 +19,14 @@ final class SeriesListViewModel {
     var isLoadingList: Bool = false
     
     private let service: SeriesListServiceInput
+    private let router: SeriesListRoutering
     weak var view: SeriesListView?
     
     // MARK: Object Lifecycle
     
-    init(service: SeriesListServiceInput) {
+    init(service: SeriesListServiceInput, router: SeriesListRoutering) {
         self.service = service
+        self.router = router
         service.output = self
     }
     
@@ -38,6 +40,11 @@ final class SeriesListViewModel {
     
     func fetchPopularSeries(currentPage: Int) {
         service.fetchPopularSeries(page: currentPage)
+    }
+    
+    func didSelectItemAt(index: Int) {
+        let selectedSerieId = series[index].id
+        router.navigateToSerieDetailsScene(serieId: selectedSerieId)
     }
     
 }

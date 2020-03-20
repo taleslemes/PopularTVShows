@@ -21,6 +21,12 @@ final class SerieDetailsViewModel {
         service.output = self
     }
     
+    // MARK: Public Methods
+    
+    func viewDidLoad() {
+        service.fetchSerieDetails()
+    }
+    
 }
 
 // MARK: SerieDetailsServiceOutput Interface Implementation

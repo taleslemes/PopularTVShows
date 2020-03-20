@@ -15,7 +15,6 @@ struct SerieDetails: Decodable {
     let voteAverage: Double
     let overview: String
     let genres: [Genre]
-    let similarShows: [SimilarShows]
     
     enum CodingKeys: String, CodingKey {
         case genres, overview
@@ -23,7 +22,6 @@ struct SerieDetails: Decodable {
         case image = "poster_path"
         case firstAirDate = "first_air_date"
         case voteAverage = "vote_average"
-        case similarShows = "networks"
     }
 }
 

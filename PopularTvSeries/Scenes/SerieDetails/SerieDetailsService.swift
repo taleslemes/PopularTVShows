@@ -20,7 +20,7 @@ final class SerieDetailsService: SeriesDetailsServiceInput {
     }
     
     func fetchSerieDetails() {
-        api.request(url: Urls.serieDetailsPart1 + Urls.apiKey + Urls.serieDetailsPart2, success: { [output] (serieDetail: SerieDetails) in
+        api.request(url: Urls.serieDetailsPart1 + "\(serieId)" + Urls.serieDetailsPart2, success: { [output] (serieDetail: SerieDetails) in
             output?.fetchSerieDetailsSucceeded(serieDetails: serieDetail)
         }) { [output] (error) in
             output?.fetchSerieDetailsFailed(error: error)

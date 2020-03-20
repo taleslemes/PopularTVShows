@@ -24,3 +24,7 @@ protocol SeriesListView: AnyObject {
     func showError(message: String)
     func updateSeriesList()
 }
+
+protocol SeriesListRoutering: AnyObject {
+    func navigateToSerieDetailsScene(serieId: Int)
+}

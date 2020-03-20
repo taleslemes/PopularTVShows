@@ -10,13 +10,28 @@ import UIKit
 
 final class SeriesListRouter {
     
-    func makeViewController() -> UINavigationController {
+    private weak var context: UIViewController?
+    
+    func makeViewController() -> UIViewController {
+        let router = self
         let service = SeriesListService()
-        let viewModel = SeriesListViewModel(service: service)
+        let viewModel = SeriesListViewModel(service: service, router: router)
         let viewController = SeriesListViewController(viewModel: viewModel)
-        let navigationController = UINavigationController(rootViewController: viewController)
         
-        return navigationController
+        context = viewController
+        
+        return viewController
+    }
+    
+}
+
+// MARK: SerieListRoutering Interface Implementation
+
+extension SeriesListRouter: SeriesListRoutering {
+    
+    func navigateToSerieDetailsScene(serieId: Int) {
+        let router = SerieDetailsRouter(serieId: serieId)
+        context?.navigationController?.pushViewController(router.makeViewController(), animated: true)
     }
     
 }

@@ -106,6 +106,10 @@ extension SeriesListViewController: UICollectionViewDelegateFlowLayout {
 
 extension SeriesListViewController: UICollectionViewDelegate {
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        viewModel.didSelectItemAt(index: indexPath.row)
+    }
+    
 }
 
 // MARK: ScrollView Interface Implementation

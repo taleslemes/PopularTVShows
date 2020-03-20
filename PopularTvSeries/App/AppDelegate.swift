@@ -22,7 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func configRootViewController() {
         window = UIWindow(frame: UIScreen.main.bounds)
         let router = SeriesListRouter()
-        window?.rootViewController = router.makeViewController()
+        let rootViewController = router.makeViewController()
+        window?.rootViewController = UINavigationController(rootViewController: rootViewController)
         window?.makeKeyAndVisible()
     }
 

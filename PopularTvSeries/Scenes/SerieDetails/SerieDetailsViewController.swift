@@ -27,6 +27,7 @@ final class SerieDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        viewModel.viewDidLoad()
     }
     
 }
