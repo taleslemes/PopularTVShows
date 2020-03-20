@@ -6,8 +6,22 @@
 //  Copyright © 2020 Tales Lemes. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 final class SerieDetailsRouter {
+    
+    private let serieId: Int
+    
+    init(serieId: Int) {
+        self.serieId = serieId
+    }
+    
+    func makeViewController() -> UIViewController {
+        let service = SerieDetailsService(serieId: serieId)
+        let viewModel = SerieDetailsViewModel(service: service)
+        let viewController = SerieDetailsViewController(viewModel: viewModel)
+        
+        return viewController
+    }
     
 }

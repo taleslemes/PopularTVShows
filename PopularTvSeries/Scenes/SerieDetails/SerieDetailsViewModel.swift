@@ -10,4 +10,29 @@ import Foundation
 
 final class SerieDetailsViewModel {
     
+    // MARK: Properties
+    
+    private let service: SeriesDetailsServiceInput
+    
+    // MARK: Object Lifecyle
+    
+    init(service: SeriesDetailsServiceInput) {
+        self.service = service
+        service.output = self
+    }
+    
+}
+
+// MARK: SerieDetailsServiceOutput Interface Implementation
+
+extension SerieDetailsViewModel: SeriesDetailsServiceOutput {
+    
+    func fetchSerieDetailsSucceeded(serieDetails: SerieDetails) {
+        
+    }
+    
+    func fetchSerieDetailsFailed(error: AppError) {
+        
+    }
+    
 }

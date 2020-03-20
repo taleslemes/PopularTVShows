@@ -41,6 +41,7 @@
 		2DCBD2B824246AEA0028BFE4 /* SerieDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBD2B724246AEA0028BFE4 /* SerieDetailsRouter.swift */; };
 		2DCBD2BA24246B190028BFE4 /* SerieDetailsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBD2B924246B190028BFE4 /* SerieDetailsProtocols.swift */; };
 		2DCBD2BC24246C030028BFE4 /* SerieDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBD2BB24246C030028BFE4 /* SerieDetails.swift */; };
+		2DCBD2BE242470A90028BFE4 /* SerieDetailsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBD2BD242470A90028BFE4 /* SerieDetailsService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		2DCBD2B724246AEA0028BFE4 /* SerieDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieDetailsRouter.swift; sourceTree = "<group>"; };
 		2DCBD2B924246B190028BFE4 /* SerieDetailsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieDetailsProtocols.swift; sourceTree = "<group>"; };
 		2DCBD2BB24246C030028BFE4 /* SerieDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieDetails.swift; sourceTree = "<group>"; };
+		2DCBD2BD242470A90028BFE4 /* SerieDetailsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieDetailsService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +232,7 @@
 				2DCBD2B224246A170028BFE4 /* SerieDetailsViewController.xib */,
 				2DCBD2B124246A160028BFE4 /* SerieDetailsViewController.swift */,
 				2DCBD2B524246A960028BFE4 /* SerieDetailsViewModel.swift */,
+				2DCBD2BD242470A90028BFE4 /* SerieDetailsService.swift */,
 				2DCBD2B724246AEA0028BFE4 /* SerieDetailsRouter.swift */,
 				2DCBD2B924246B190028BFE4 /* SerieDetailsProtocols.swift */,
 			);
@@ -373,6 +376,7 @@
 				2DCBD2A124231F740028BFE4 /* SeriesListService.swift in Sources */,
 				2DCBD2BA24246B190028BFE4 /* SerieDetailsProtocols.swift in Sources */,
 				2DCBD29B24231BA40028BFE4 /* APICore.swift in Sources */,
+				2DCBD2BE242470A90028BFE4 /* SerieDetailsService.swift in Sources */,
 				2D6F265724230887006B1D38 /* SeriesListViewModel.swift in Sources */,
 				2DCBD2AC24232BAA0028BFE4 /* UIImageView.swift in Sources */,
 				2D6F26462422F4C1006B1D38 /* SeriesListViewController.swift in Sources */,

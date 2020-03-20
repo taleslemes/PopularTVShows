@@ -14,6 +14,6 @@ protocol SeriesDetailsServiceInput: AnyObject {
 }
 
 protocol SeriesDetailsServiceOutput: AnyObject {
-    func fetchSerieDetailsSucceeded()
+    func fetchSerieDetailsSucceeded(serieDetails: SerieDetails)
     func fetchSerieDetailsFailed(error: AppError)
 }
