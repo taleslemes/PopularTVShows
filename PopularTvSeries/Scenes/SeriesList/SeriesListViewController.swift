@@ -129,6 +129,7 @@ extension SeriesListViewController: UIScrollViewDelegate {
         viewModel.fetchPopularSeries(currentPage: viewModel.currentPage)
         viewModel.isLoadingList = false
         viewModel.currentPage += 1
+
     }
     
 }

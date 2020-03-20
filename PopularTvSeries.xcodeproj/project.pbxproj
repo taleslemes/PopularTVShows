@@ -35,6 +35,12 @@
 		2DCBD2AC24232BAA0028BFE4 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBD2AB24232BAA0028BFE4 /* UIImageView.swift */; };
 		2DCBD2AE24232E080028BFE4 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBD2AD24232E080028BFE4 /* String.swift */; };
 		2DCBD2B02423333E0028BFE4 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBD2AF2423333E0028BFE4 /* Device.swift */; };
+		2DCBD2B324246A170028BFE4 /* SerieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBD2B124246A160028BFE4 /* SerieDetailsViewController.swift */; };
+		2DCBD2B424246A170028BFE4 /* SerieDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DCBD2B224246A170028BFE4 /* SerieDetailsViewController.xib */; };
+		2DCBD2B624246A960028BFE4 /* SerieDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBD2B524246A960028BFE4 /* SerieDetailsViewModel.swift */; };
+		2DCBD2B824246AEA0028BFE4 /* SerieDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBD2B724246AEA0028BFE4 /* SerieDetailsRouter.swift */; };
+		2DCBD2BA24246B190028BFE4 /* SerieDetailsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBD2B924246B190028BFE4 /* SerieDetailsProtocols.swift */; };
+		2DCBD2BC24246C030028BFE4 /* SerieDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBD2BB24246C030028BFE4 /* SerieDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +74,12 @@
 		2DCBD2AB24232BAA0028BFE4 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		2DCBD2AD24232E080028BFE4 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		2DCBD2AF2423333E0028BFE4 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		2DCBD2B124246A160028BFE4 /* SerieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieDetailsViewController.swift; sourceTree = "<group>"; };
+		2DCBD2B224246A170028BFE4 /* SerieDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SerieDetailsViewController.xib; sourceTree = "<group>"; };
+		2DCBD2B524246A960028BFE4 /* SerieDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieDetailsViewModel.swift; sourceTree = "<group>"; };
+		2DCBD2B724246AEA0028BFE4 /* SerieDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieDetailsRouter.swift; sourceTree = "<group>"; };
+		2DCBD2B924246B190028BFE4 /* SerieDetailsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieDetailsProtocols.swift; sourceTree = "<group>"; };
+		2DCBD2BB24246C030028BFE4 /* SerieDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,7 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				2D6F26432422F470006B1D38 /* SeriesList */,
-				2D6F26422422F46B006B1D38 /* SeriesDetails */,
+				2D6F26422422F46B006B1D38 /* SerieDetails */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -198,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				2DCBD2982423193E0028BFE4 /* Serie.swift */,
+				2DCBD2BB24246C030028BFE4 /* SerieDetails.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -211,11 +224,16 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
-		2D6F26422422F46B006B1D38 /* SeriesDetails */ = {
+		2D6F26422422F46B006B1D38 /* SerieDetails */ = {
 			isa = PBXGroup;
 			children = (
+				2DCBD2B224246A170028BFE4 /* SerieDetailsViewController.xib */,
+				2DCBD2B124246A160028BFE4 /* SerieDetailsViewController.swift */,
+				2DCBD2B524246A960028BFE4 /* SerieDetailsViewModel.swift */,
+				2DCBD2B724246AEA0028BFE4 /* SerieDetailsRouter.swift */,
+				2DCBD2B924246B190028BFE4 /* SerieDetailsProtocols.swift */,
 			);
-			path = SeriesDetails;
+			path = SerieDetails;
 			sourceTree = "<group>";
 		};
 		2D6F26432422F470006B1D38 /* SeriesList */ = {
@@ -320,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D6F264D2422FB9D006B1D38 /* IBMPlexSans-Bold.ttf in Resources */,
+				2DCBD2B424246A170028BFE4 /* SerieDetailsViewController.xib in Resources */,
 				2D6F262E2422EA1E006B1D38 /* LaunchScreen.storyboard in Resources */,
 				2D6F264E2422FB9D006B1D38 /* IBMPlexSans-Regular.ttf in Resources */,
 				2D6F265524230503006B1D38 /* SeriesCVCell.xib in Resources */,
@@ -335,6 +354,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DCBD2B624246A960028BFE4 /* SerieDetailsViewModel.swift in Sources */,
 				2DCBD2A324231F880028BFE4 /* SeriesListProtocols.swift in Sources */,
 				2DCBD29F24231C890028BFE4 /* Paths.swift in Sources */,
 				2DCBD2A9242327AD0028BFE4 /* ActivityIndicator.swift in Sources */,
@@ -346,16 +366,20 @@
 				2DCBD297242317010028BFE4 /* SeriesCVCellProtocols.swift in Sources */,
 				2DCBD2A7242327850028BFE4 /* Loader.swift in Sources */,
 				2DCBD2A5242327380028BFE4 /* UIViewController.swift in Sources */,
+				2DCBD2B324246A170028BFE4 /* SerieDetailsViewController.swift in Sources */,
 				2DCBD2B02423333E0028BFE4 /* Device.swift in Sources */,
 				2DCBD295242316E30028BFE4 /* SeriesCVCellViewModel.swift in Sources */,
 				2D6F26222422EA17006B1D38 /* AppDelegate.swift in Sources */,
 				2DCBD2A124231F740028BFE4 /* SeriesListService.swift in Sources */,
+				2DCBD2BA24246B190028BFE4 /* SerieDetailsProtocols.swift in Sources */,
 				2DCBD29B24231BA40028BFE4 /* APICore.swift in Sources */,
 				2D6F265724230887006B1D38 /* SeriesListViewModel.swift in Sources */,
 				2DCBD2AC24232BAA0028BFE4 /* UIImageView.swift in Sources */,
 				2D6F26462422F4C1006B1D38 /* SeriesListViewController.swift in Sources */,
 				2DCBD2AE24232E080028BFE4 /* String.swift in Sources */,
 				2D6F26492422F50B006B1D38 /* SeriesListRouter.swift in Sources */,
+				2DCBD2B824246AEA0028BFE4 /* SerieDetailsRouter.swift in Sources */,
+				2DCBD2BC24246C030028BFE4 /* SerieDetails.swift in Sources */,
 				2D6F265924230A0E006B1D38 /* StyleSheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
