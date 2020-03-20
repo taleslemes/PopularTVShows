@@ -17,3 +17,16 @@ protocol SeriesDetailsServiceOutput: AnyObject {
     func fetchSerieDetailsSucceeded(serieDetails: SerieDetails)
     func fetchSerieDetailsFailed(error: AppError)
 }
+
+protocol SeriesDetailsView: AnyObject {
+    func showLoader()
+    func hideLoader()
+    func showError(message: String)
+    func setPosterImage(with image: String)
+    func setVoteAverage(with text: String)
+    func setFirstAirDate(with text: String)
+    func setOverview(with text: String)
+    func setTitle(with text: String)
+    func setGenres(with text: String)
+    
+}
