@@ -15,7 +15,7 @@ protocol SeriesListServiceInput: AnyObject {
 
 protocol SeriesListServiceOutput: AnyObject {
     func fetchPopularSeriesSucceeded(series: [Serie])
-    func fetchPopularSeriesFailed(error: AppError)
+    func fetchPopularSeriesFailed(error: Error)
 }
 
 protocol SeriesListView: AnyObject {

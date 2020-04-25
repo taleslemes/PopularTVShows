@@ -18,8 +18,8 @@ final class SerieDetailsRouter {
     
     func makeViewController() -> UIViewController {
         let service = SerieDetailsService(serieId: serieId)
-        let viewModel = SerieDetailsViewModel(service: service)
-        let viewController = SerieDetailsViewController(viewModel: viewModel)
+        let presenter = SerieDetailsPresenter(service: service)
+        let viewController = SerieDetailsViewController(presenter: presenter)
         
         return viewController
     }

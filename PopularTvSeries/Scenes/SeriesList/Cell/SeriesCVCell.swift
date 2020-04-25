@@ -37,8 +37,8 @@ final class SeriesCVCell: UICollectionViewCell {
     
     // MARK: Public Methods
     
-    func attachViewModel(_ viewModel: SeriesCVCellViewModel) {
-        viewModel.attachView(self)
+    func attachPresenter(_ presenter: SeriesCVCellPresenter) {
+        presenter.attachView(self)
     }
 
 }

@@ -8,17 +8,16 @@
 
 import Foundation
 
-enum AppError: Error {
+enum AppError {
     case generic
 }
 
-extension AppError {
+extension AppError: LocalizedError {
     
-    var description: String {
+    var errorDescription: String? {
         switch self {
         case .generic:
             return "Um problema inesperado ocorreu. Por favor, tente novamente."
         }
-    }
-    
+    }    
 }

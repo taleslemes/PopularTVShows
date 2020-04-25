@@ -18,14 +18,14 @@ final class SerieDetailsViewController: UIViewController {
     @IBOutlet private weak var genreLabel: UILabel!
     @IBOutlet private weak var similarSeriesLabel: UILabel!
     
-    private let viewModel: SerieDetailsViewModel
+    private let presenter: SerieDetailsPresenter
     
     // MARK: Object Lifecycle
     
-    init(viewModel: SerieDetailsViewModel) {
-        self.viewModel = viewModel
+    init(presenter: SerieDetailsPresenter) {
+        self.presenter = presenter
         super.init(nibName: "SerieDetailsViewController", bundle: nil)
-        viewModel.view = self
+        presenter.view = self
     }
     
     @available(*, unavailable)
@@ -35,21 +35,21 @@ final class SerieDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupPosterImageView()
-        viewModel.viewDidLoad()
+        presenter.viewDidLoad()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-          super.viewWillAppear(animated)
+        super.viewWillAppear(animated)
         
-          setupNavigationBar()
-      }
+        setupNavigationBar()
+    }
     
     // MARK: Setup Layout Methods
     
     private func setupNavigationBar() {
-        title = viewModel.title
+        title = presenter.title
         let backButtom = UIBarButtonItem(image: UIImage(named: "backButton")?.withRenderingMode(.alwaysTemplate), style: .done, target: self, action: #selector(backButtomPressed))
         backButtom.tintColor = .white
         navigationItem.leftBarButtonItem = backButtom

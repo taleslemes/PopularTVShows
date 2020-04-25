@@ -15,8 +15,8 @@ final class SeriesListRouter {
     func makeViewController() -> UIViewController {
         let router = self
         let service = SeriesListService()
-        let viewModel = SeriesListViewModel(service: service, router: router)
-        let viewController = SeriesListViewController(viewModel: viewModel)
+        let presenter = SeriesListPresenter(service: service, router: router)
+        let viewController = SeriesListViewController(presenter: presenter)
         
         context = viewController
         

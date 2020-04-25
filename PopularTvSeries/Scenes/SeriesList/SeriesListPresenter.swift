@@ -1,5 +1,5 @@
 //
-//  SeriesListViewModel.swift
+//  SeriesListPresenter.swift
 //  PopularTvSeries
 //
 //  Created by Tales Lemes on 18/03/20.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class SeriesListViewModel {
+final class SeriesListPresenter {
     
     // MARK: Properties
     
@@ -49,9 +49,9 @@ final class SeriesListViewModel {
     
 }
 
-// MARK: SeriesListService Output Interface Implementation
+// MARK: SeriesListServiceOutput Interface Implementation
 
-extension SeriesListViewModel: SeriesListServiceOutput {
+extension SeriesListPresenter: SeriesListServiceOutput {
     
     func fetchPopularSeriesSucceeded(series: [Serie]) {
         for serie in series {
@@ -62,9 +62,9 @@ extension SeriesListViewModel: SeriesListServiceOutput {
         view?.updateSeriesList()
     }
     
-    func fetchPopularSeriesFailed(error: AppError) {
+    func fetchPopularSeriesFailed(error: Error) {
         view?.hideLoader()
-        view?.showError(message: error.description)
+        view?.showError(message: error.localizedDescription)
     }
     
 }

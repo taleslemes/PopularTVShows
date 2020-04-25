@@ -17,6 +17,8 @@ final class SeriesListService: SeriesListServiceInput {
         self.api = api
     }
     
+    // MARK: SeriesListServiceInput Interface Implementation
+    
     func fetchPopularSeries(page: Int) {
         api.request(url: Urls.popularSeriesBase + "\(page)", success: { [output] (series: SeriesResponse) in
             output?.fetchPopularSeriesSucceeded(series: series.results)

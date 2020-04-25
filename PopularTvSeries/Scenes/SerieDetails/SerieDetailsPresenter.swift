@@ -1,5 +1,5 @@
 //
-//  SerieDetailsViewModel.swift
+//  SerieDetailsPresenter.swift
 //  PopularTvSeries
 //
 //  Created by Tales Lemes on 20/03/20.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class SerieDetailsViewModel {
+final class SerieDetailsPresenter {
     
     // MARK: Properties
     
@@ -36,7 +36,7 @@ final class SerieDetailsViewModel {
 
 // MARK: SerieDetailsServiceOutput Interface Implementation
 
-extension SerieDetailsViewModel: SeriesDetailsServiceOutput {
+extension SerieDetailsPresenter: SeriesDetailsServiceOutput {
     
     func fetchSimilarSeriesSucceeded(similarSeries: [SimilarSerie]) {
         
@@ -52,9 +52,9 @@ extension SerieDetailsViewModel: SeriesDetailsServiceOutput {
         view?.setSimilarSeries(with: "Similar TV Shows: \(similarSeries)")
     }
     
-    func fetchSimilarSeriesFailed(error: AppError) {
+    func fetchSimilarSeriesFailed(error: Error) {
         view?.hideLoader()
-        view?.showError(message: error.description)
+        view?.showError(message: error.localizedDescription)
     }
         
     func fetchSerieDetailsSucceeded(serieDetails: SerieDetails) {
@@ -73,9 +73,9 @@ extension SerieDetailsViewModel: SeriesDetailsServiceOutput {
         view?.setGenres(with: "Genre: \(genres)")
     }
     
-    func fetchSerieDetailsFailed(error: AppError) {
+    func fetchSerieDetailsFailed(error: Error) {
         view?.hideLoader()
-        view?.showError(message: error.description)
+        view?.showError(message: error.localizedDescription)
     }
     
 }

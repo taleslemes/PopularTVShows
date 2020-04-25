@@ -21,14 +21,14 @@ final class SeriesListViewController: UIViewController {
     
     @IBOutlet private weak var collectionView: UICollectionView!
     
-    private let viewModel: SeriesListViewModel
+    private let presenter: SeriesListPresenter
     
     // MARK: Object Lifecycle
     
-    init(viewModel: SeriesListViewModel) {
-        self.viewModel = viewModel
+    init(presenter: SeriesListPresenter) {
+        self.presenter = presenter
         super.init(nibName: "SeriesListViewController", bundle: nil)
-        viewModel.view = self
+        presenter.view = self
     }
     
     @available(*, unavailable)
@@ -40,7 +40,7 @@ final class SeriesListViewController: UIViewController {
         super.viewDidLoad()
         
         setupCollectionView()
-        viewModel.viewDidLoad()
+        presenter.viewDidLoad()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -54,7 +54,7 @@ final class SeriesListViewController: UIViewController {
     private func setupNavigationBar() {
         navigationController?.navigationBar.barTintColor = .customGreen
         navigationController?.navigationBar.barStyle = .black
-        title = viewModel.title
+        title = presenter.title
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white, .font: UIFont.IBMPlexSans(withWeight: .bold, size: 28)]
     }
     
@@ -67,26 +67,28 @@ final class SeriesListViewController: UIViewController {
     
 }
 
-// MARK: CollectionView Interface Implementation
+// MARK: UICollectionViewDataSource Interface Implementation
 
 extension SeriesListViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.series.count
+        return presenter.series.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SeriesCVCell.identifier, for: indexPath) as? SeriesCVCell else { return UICollectionViewCell() }
         
-        let cellModel = viewModel.series[indexPath.row]
-        let cellViewModel = SeriesCVCellViewModel(model: cellModel)
+        let cellModel = presenter.series[indexPath.row]
+        let cellPresenter = SeriesCVCellPresenter(model: cellModel)
         
-        cell.attachViewModel(cellViewModel)
+        cell.attachPresenter(cellPresenter)
         
         return cell
     }
     
 }
+
+// MARK: UICollectionViewDelegateFlowLayout Interface Implementation
 
 extension SeriesListViewController: UICollectionViewDelegateFlowLayout {
     
@@ -104,36 +106,37 @@ extension SeriesListViewController: UICollectionViewDelegateFlowLayout {
     
 }
 
+// MARK: UICollectionViewDelegate Interface Implementation
+
 extension SeriesListViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        viewModel.didSelectItemAt(index: indexPath.row)
+        presenter.didSelectItemAt(index: indexPath.row)
     }
     
 }
 
-// MARK: ScrollView Interface Implementation
+// MARK: UIScrollViewDelegate Interface Implementation
 
 extension SeriesListViewController: UIScrollViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-
+        
         let offsetY = scrollView.contentOffset.y
         let contentHeight = scrollView.contentSize.height
         
         /// Here we check where the user is in the Y axis
-        if offsetY / contentHeight > 0.7 && !viewModel.isLoadingList {
-            viewModel.isLoadingList = true
-            getMoreSeriesFromServer(viewModel.currentPage)
+        if offsetY / contentHeight > 0.7 && !presenter.isLoadingList {
+            presenter.isLoadingList = true
+            getMoreSeriesFromServer(presenter.currentPage)
         }
     }
     
-    /// This method is used to fetch TV Series data found in another page provided by the API (pagination)
+    /// This method is used to fetch TV Series data found in a different page provided by the API (pagination)
     private func getMoreSeriesFromServer(_ pageNumber: Int) {
-        viewModel.fetchPopularSeries(currentPage: viewModel.currentPage)
-        viewModel.isLoadingList = false
-        viewModel.currentPage += 1
-
+        presenter.fetchPopularSeries(currentPage: presenter.currentPage)
+        presenter.isLoadingList = false
+        presenter.currentPage += 1
     }
     
 }

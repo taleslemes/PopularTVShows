@@ -1,5 +1,5 @@
 //
-//  SeriesCVCellViewModel.swift
+//  SeriesCVCellPresenter.swift
 //  PopularTvSeries
 //
 //  Created by Tales Lemes on 18/03/20.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class SeriesCVCellViewModel {
+final class SeriesCVCellPresenter {
     
     // MARK: Properties
     
