@@ -15,8 +15,8 @@ Swift 5
 
 ### MVP(Clean Architecture)
 Model-View-Presenter architectural pattern is used in this project.  
-The application was developed aiming at good programming practices and clean code. Hence, a Service Layer is used in order to access the remote data found in The Movie Database API. Furthermore, the app navigation is handled using a Router component.  
-Thus we can say that the project was designed respecting the Single Responsibility Principle.
+The application was developed aiming at good programming practices and clean code.  
+A Service Layer is used in order to access the remote data found in The Movie Database API. Furthermore, the app navigation is handled using a Router component.
 
 ## Layout
 
