@@ -1,6 +1,6 @@
 # PopularTVSeries
-This application displays to the user a list of popular TV series. More details are revealed on a new screen when selecting one of them.
-The application is fed with content from The Movie Database API.
+This application displays to the user a list of popular TV series. More details are revealed on a new screen when selecting one of them.  
+The application is fed with content from The Movie Database API.  
 The API documentation can be found here: ​https://developers.themoviedb.org/3.
 
 ## App Screenshots
