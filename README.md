@@ -1,5 +1,9 @@
 # PopularTVSeries
-![Alt text](https://i.imgur.com/mCKq5im.gif)  
+
+| App experience |
+| ------------------- |
+| ![Alt text](https://i.imgur.com/mCKq5im.gif) |
+
 This application displays to the user a list of popular TV series. More details are revealed on a new screen when selecting one of them.  
 It is fed with content from The Movie Database API.  
 The API documentation can be found here: ​https://developers.themoviedb.org/3.
