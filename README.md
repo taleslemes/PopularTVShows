@@ -1,6 +1,6 @@
 # PopularTVSeries
 
-| App experience |
+| App Experience |
 | ------------------- |
 | ![Alt text](https://i.imgur.com/mCKq5im.gif) |
 
