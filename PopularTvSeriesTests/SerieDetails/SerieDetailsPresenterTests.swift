@@ -202,7 +202,7 @@ final class SerieDetailsViewSpy: SerieDetailsView {
     
 }
 
-// MARK: SeriesDetailsServiceSpy
+// MARK: SerieDetailsServiceSpy
 
 final class SerieDetailsServiceSpy: SerieDetailsServiceInput {
     var output: SerieDetailsServiceOutput?
