@@ -1,5 +1,5 @@
 //
-//  SeriesCVCell.swift
+//  SerieCVCell.swift
 //  PopularTvSeries
 //
 //  Created by Tales Lemes on 18/03/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class SeriesCVCell: UICollectionViewCell {
+final class SerieCVCell: UICollectionViewCell {
 
     // MARK: Properties
     
@@ -18,7 +18,7 @@ final class SeriesCVCell: UICollectionViewCell {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var posterImageViewHeightConstraint: NSLayoutConstraint!
     
-    static let identifier = "seriesCVCell"
+    static let identifier = "serieCVCell"
     
     // MARK: Override Methods
     
@@ -31,21 +31,20 @@ final class SeriesCVCell: UICollectionViewCell {
         
         if Device.isIphoneSE {
             posterImageViewHeightConstraint.isActive = false
-            print(frame.height)
         }
     }
     
     // MARK: Public Methods
     
-    func attachPresenter(_ presenter: SeriesCVCellPresenter) {
+    func attachPresenter(_ presenter: SerieCVCellPresenter) {
         presenter.attachView(self)
     }
 
 }
 
-// MARK: SeriesCVCellView Interface Implementation
+// MARK: SerieCVCellView Interface Implementation
 
-extension SeriesCVCell: SeriesCVCellView {
+extension SerieCVCell: SerieCVCellView {
     
     func setPosterImage(with imageName: String) {
         posterImageView.loadImage(from: imageName)

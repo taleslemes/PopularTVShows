@@ -1,5 +1,5 @@
 //
-//  SeriesCVCellProtocols.swift
+//  SerieCVCellProtocols.swift
 //  PopularTvSeries
 //
 //  Created by Tales Lemes on 18/03/20.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol SeriesCVCellView: AnyObject {
+protocol SerieCVCellView: AnyObject {
     func setPosterImage(with imageName: String)
     func setTitle(with text: String)
     func setVoteAverage(with text: String)

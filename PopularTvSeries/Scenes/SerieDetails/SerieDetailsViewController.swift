@@ -67,7 +67,7 @@ final class SerieDetailsViewController: UIViewController {
 
 // MARK: SerieDetailsView Interface Implementation
 
-extension SerieDetailsViewController: SeriesDetailsView {
+extension SerieDetailsViewController: SerieDetailsView {
     
     func showLoader() {
         Loader.show(in: self)

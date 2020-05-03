@@ -8,20 +8,20 @@
 
 import Foundation
 
-protocol SeriesDetailsServiceInput: AnyObject {
+protocol SerieDetailsServiceInput: AnyObject {
     func fetchSerieDetails()
     func fetchSimilarSeries()
-    var output: SeriesDetailsServiceOutput? { get set }
+    var output: SerieDetailsServiceOutput? { get set }
 }
 
-protocol SeriesDetailsServiceOutput: AnyObject {
+protocol SerieDetailsServiceOutput: AnyObject {
     func fetchSerieDetailsSucceeded(serieDetails: SerieDetails)
     func fetchSerieDetailsFailed(error: Error)
     func fetchSimilarSeriesSucceeded(similarSeries: [SimilarSerie])
     func fetchSimilarSeriesFailed(error: Error)
 }
 
-protocol SeriesDetailsView: AnyObject {
+protocol SerieDetailsView: AnyObject {
     func showLoader()
     func hideLoader()
     func showError(message: String)

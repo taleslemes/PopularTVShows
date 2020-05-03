@@ -15,6 +15,13 @@ private enum CollectionViewLayout {
     static let insets: UIEdgeInsets = UIEdgeInsets(top: 15, left: 0, bottom: 15, right: 0)
 }
 
+private enum NavigationBarLayout {
+    static let barTintColor: UIColor = .customGreen
+    static let barStyle: UIBarStyle = .black
+    static let titleTextColor: UIColor = .white
+    static let titleTextFont: UIFont = .IBMPlexSans(withWeight: .bold, size: 28)
+}
+
 final class SeriesListViewController: UIViewController {
     
     // MARK: Properties
@@ -52,16 +59,16 @@ final class SeriesListViewController: UIViewController {
     // MARK: Setup Layout Methods
     
     private func setupNavigationBar() {
-        navigationController?.navigationBar.barTintColor = .customGreen
-        navigationController?.navigationBar.barStyle = .black
+        navigationController?.navigationBar.barTintColor = NavigationBarLayout.barTintColor
+        navigationController?.navigationBar.barStyle = NavigationBarLayout.barStyle
         title = presenter.title
-        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white, .font: UIFont.IBMPlexSans(withWeight: .bold, size: 28)]
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: NavigationBarLayout.titleTextColor, .font: NavigationBarLayout.titleTextFont]
     }
     
     private func setupCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(UINib(nibName: "SeriesCVCell", bundle: nil), forCellWithReuseIdentifier: SeriesCVCell.identifier)
+        collectionView.register(UINib(nibName: "SerieCVCell", bundle: nil), forCellWithReuseIdentifier: SerieCVCell.identifier)
         collectionView.backgroundColor = .clear
     }
     
@@ -76,10 +83,10 @@ extension SeriesListViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SeriesCVCell.identifier, for: indexPath) as? SeriesCVCell else { return UICollectionViewCell() }
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SerieCVCell.identifier, for: indexPath) as? SerieCVCell else { return UICollectionViewCell() }
         
         let cellModel = presenter.series[indexPath.row]
-        let cellPresenter = SeriesCVCellPresenter(model: cellModel)
+        let cellPresenter = SerieCVCellPresenter(model: cellModel)
         
         cell.attachPresenter(cellPresenter)
         

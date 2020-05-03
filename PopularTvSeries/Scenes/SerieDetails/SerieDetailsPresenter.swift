@@ -12,14 +12,14 @@ final class SerieDetailsPresenter {
     
     // MARK: Properties
     
-    weak var view: SeriesDetailsView?
-    private let service: SeriesDetailsServiceInput
+    weak var view: SerieDetailsView?
+    private let service: SerieDetailsServiceInput
     
     let title = "Serie Details"
     
     // MARK: Object Lifecyle
     
-    init(service: SeriesDetailsServiceInput) {
+    init(service: SerieDetailsServiceInput) {
         self.service = service
         service.output = self
     }
@@ -36,7 +36,7 @@ final class SerieDetailsPresenter {
 
 // MARK: SerieDetailsServiceOutput Interface Implementation
 
-extension SerieDetailsPresenter: SeriesDetailsServiceOutput {
+extension SerieDetailsPresenter: SerieDetailsServiceOutput {
     
     func fetchSimilarSeriesSucceeded(similarSeries: [SimilarSerie]) {
         

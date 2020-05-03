@@ -8,9 +8,9 @@
 
 import Foundation
 
-final class SerieDetailsService: SeriesDetailsServiceInput {
+final class SerieDetailsService: SerieDetailsServiceInput {
     
-    weak var output: SeriesDetailsServiceOutput?
+    weak var output: SerieDetailsServiceOutput?
     private let api: APIProvider
     private let serieId: Int
     

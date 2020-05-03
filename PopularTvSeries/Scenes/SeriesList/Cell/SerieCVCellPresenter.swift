@@ -1,5 +1,5 @@
 //
-//  SeriesCVCellPresenter.swift
+//  SerieCVCellPresenter.swift
 //  PopularTvSeries
 //
 //  Created by Tales Lemes on 18/03/20.
@@ -8,11 +8,11 @@
 
 import Foundation
 
-final class SeriesCVCellPresenter {
+final class SerieCVCellPresenter {
     
     // MARK: Properties
     
-    private weak var view: SeriesCVCellView?
+    private weak var view: SerieCVCellView?
     private let model: Serie
     
     // MARK: Object Lifecycle
@@ -23,7 +23,7 @@ final class SeriesCVCellPresenter {
     
     // MARK: Public Methods
     
-    func attachView(_ view: SeriesCVCellView) {
+    func attachView(_ view: SerieCVCellView) {
         self.view = view
         
         setTitle()

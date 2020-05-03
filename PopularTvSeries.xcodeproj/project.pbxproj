@@ -16,13 +16,14 @@
 		2D6F264D2422FB9D006B1D38 /* IBMPlexSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D6F264B2422FB9D006B1D38 /* IBMPlexSans-Bold.ttf */; };
 		2D6F264E2422FB9D006B1D38 /* IBMPlexSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D6F264C2422FB9D006B1D38 /* IBMPlexSans-Regular.ttf */; };
 		2D6F26502422FFD7006B1D38 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6F264F2422FFD7006B1D38 /* UIFont.swift */; };
-		2D6F265424230503006B1D38 /* SeriesCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6F265224230503006B1D38 /* SeriesCVCell.swift */; };
-		2D6F265524230503006B1D38 /* SeriesCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D6F265324230503006B1D38 /* SeriesCVCell.xib */; };
+		2D6F265424230503006B1D38 /* SerieCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6F265224230503006B1D38 /* SerieCVCell.swift */; };
+		2D6F265524230503006B1D38 /* SerieCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D6F265324230503006B1D38 /* SerieCVCell.xib */; };
 		2D6F265724230887006B1D38 /* SeriesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6F265624230887006B1D38 /* SeriesListPresenter.swift */; };
 		2D6F265924230A0E006B1D38 /* StyleSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6F265824230A0E006B1D38 /* StyleSheet.swift */; };
 		2D6F265B24230F1E006B1D38 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6F265A24230F1E006B1D38 /* UIView.swift */; };
 		2D9963D12456578C004FCC4D /* SeriesListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9963D02456578C004FCC4D /* SeriesListPresenterTests.swift */; };
-		2DCBD295242316E30028BFE4 /* SeriesCVCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBD294242316E30028BFE4 /* SeriesCVCellPresenter.swift */; };
+		2D9CB2BD245E7D2900B9F803 /* SerieDetailsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9CB2BC245E7D2900B9F803 /* SerieDetailsPresenterTests.swift */; };
+		2DCBD295242316E30028BFE4 /* SerieCVCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBD294242316E30028BFE4 /* SerieCVCellPresenter.swift */; };
 		2DCBD297242317010028BFE4 /* SeriesCVCellProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBD296242317010028BFE4 /* SeriesCVCellProtocols.swift */; };
 		2DCBD2992423193E0028BFE4 /* Serie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBD2982423193E0028BFE4 /* Serie.swift */; };
 		2DCBD29B24231BA40028BFE4 /* APICore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBD29A24231BA40028BFE4 /* APICore.swift */; };
@@ -68,15 +69,16 @@
 		2D6F264B2422FB9D006B1D38 /* IBMPlexSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-Bold.ttf"; sourceTree = "<group>"; };
 		2D6F264C2422FB9D006B1D38 /* IBMPlexSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-Regular.ttf"; sourceTree = "<group>"; };
 		2D6F264F2422FFD7006B1D38 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
-		2D6F265224230503006B1D38 /* SeriesCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesCVCell.swift; sourceTree = "<group>"; };
-		2D6F265324230503006B1D38 /* SeriesCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeriesCVCell.xib; sourceTree = "<group>"; };
+		2D6F265224230503006B1D38 /* SerieCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieCVCell.swift; sourceTree = "<group>"; };
+		2D6F265324230503006B1D38 /* SerieCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SerieCVCell.xib; sourceTree = "<group>"; };
 		2D6F265624230887006B1D38 /* SeriesListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesListPresenter.swift; sourceTree = "<group>"; };
 		2D6F265824230A0E006B1D38 /* StyleSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleSheet.swift; sourceTree = "<group>"; };
 		2D6F265A24230F1E006B1D38 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		2D9963CE2456578C004FCC4D /* PopularTvSeriesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PopularTvSeriesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D9963D02456578C004FCC4D /* SeriesListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesListPresenterTests.swift; sourceTree = "<group>"; };
 		2D9963D22456578C004FCC4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2DCBD294242316E30028BFE4 /* SeriesCVCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesCVCellPresenter.swift; sourceTree = "<group>"; };
+		2D9CB2BC245E7D2900B9F803 /* SerieDetailsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieDetailsPresenterTests.swift; sourceTree = "<group>"; };
+		2DCBD294242316E30028BFE4 /* SerieCVCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieCVCellPresenter.swift; sourceTree = "<group>"; };
 		2DCBD296242317010028BFE4 /* SeriesCVCellProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesCVCellProtocols.swift; sourceTree = "<group>"; };
 		2DCBD2982423193E0028BFE4 /* Serie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serie.swift; sourceTree = "<group>"; };
 		2DCBD29A24231BA40028BFE4 /* APICore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICore.swift; sourceTree = "<group>"; };
@@ -144,7 +146,8 @@
 				2D6F263B2422F2B3006B1D38 /* Errors */,
 				2D6F26402422F35B006B1D38 /* Entities */,
 				2D6F26372422F25B006B1D38 /* Scenes */,
-				2D6F26412422F392006B1D38 /* Core */,
+				2D9CB2BF245E8BA300B9F803 /* Colors */,
+				2D6F26412422F392006B1D38 /* Utils */,
 				2D6F263A2422F29C006B1D38 /* Extensions */,
 				2D6F26392422F28C006B1D38 /* Components */,
 				2D6F26352422F114006B1D38 /* Resources */,
@@ -243,13 +246,12 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
-		2D6F26412422F392006B1D38 /* Core */ = {
+		2D6F26412422F392006B1D38 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				2D6F265824230A0E006B1D38 /* StyleSheet.swift */,
 				2DCBD2AF2423333E0028BFE4 /* Device.swift */,
 			);
-			path = Core;
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		2D6F26422422F46B006B1D38 /* SerieDetails */ = {
@@ -291,9 +293,9 @@
 		2D6F2651242304DF006B1D38 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				2D6F265324230503006B1D38 /* SeriesCVCell.xib */,
-				2D6F265224230503006B1D38 /* SeriesCVCell.swift */,
-				2DCBD294242316E30028BFE4 /* SeriesCVCellPresenter.swift */,
+				2D6F265324230503006B1D38 /* SerieCVCell.xib */,
+				2D6F265224230503006B1D38 /* SerieCVCell.swift */,
+				2DCBD294242316E30028BFE4 /* SerieCVCellPresenter.swift */,
 				2DCBD296242317010028BFE4 /* SeriesCVCellProtocols.swift */,
 			);
 			path = Cell;
@@ -303,6 +305,7 @@
 			isa = PBXGroup;
 			children = (
 				2D9963D824565794004FCC4D /* SeriesList */,
+				2D9CB2BE245E7D3F00B9F803 /* SerieDetails */,
 				2D9963D22456578C004FCC4D /* Info.plist */,
 			);
 			path = PopularTvSeriesTests;
@@ -314,6 +317,22 @@
 				2D9963D02456578C004FCC4D /* SeriesListPresenterTests.swift */,
 			);
 			path = SeriesList;
+			sourceTree = "<group>";
+		};
+		2D9CB2BE245E7D3F00B9F803 /* SerieDetails */ = {
+			isa = PBXGroup;
+			children = (
+				2D9CB2BC245E7D2900B9F803 /* SerieDetailsPresenterTests.swift */,
+			);
+			path = SerieDetails;
+			sourceTree = "<group>";
+		};
+		2D9CB2BF245E8BA300B9F803 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				2D6F265824230A0E006B1D38 /* StyleSheet.swift */,
+			);
+			path = Colors;
 			sourceTree = "<group>";
 		};
 		2DCBD2AA242327E80028BFE4 /* Loader */ = {
@@ -410,7 +429,7 @@
 				2DCBD2B424246A170028BFE4 /* SerieDetailsViewController.xib in Resources */,
 				2D6F262E2422EA1E006B1D38 /* LaunchScreen.storyboard in Resources */,
 				2D6F264E2422FB9D006B1D38 /* IBMPlexSans-Regular.ttf in Resources */,
-				2D6F265524230503006B1D38 /* SeriesCVCell.xib in Resources */,
+				2D6F265524230503006B1D38 /* SerieCVCell.xib in Resources */,
 				2D6F262B2422EA1E006B1D38 /* Assets.xcassets in Resources */,
 				2D6F26472422F4C1006B1D38 /* SeriesListViewController.xib in Resources */,
 			);
@@ -435,7 +454,7 @@
 				2DCBD29F24231C890028BFE4 /* Paths.swift in Sources */,
 				2DCBD2A9242327AD0028BFE4 /* ActivityIndicator.swift in Sources */,
 				2D6F265B24230F1E006B1D38 /* UIView.swift in Sources */,
-				2D6F265424230503006B1D38 /* SeriesCVCell.swift in Sources */,
+				2D6F265424230503006B1D38 /* SerieCVCell.swift in Sources */,
 				2DCBD2992423193E0028BFE4 /* Serie.swift in Sources */,
 				2D6F26502422FFD7006B1D38 /* UIFont.swift in Sources */,
 				2DCBD29D24231BEE0028BFE4 /* AppError.swift in Sources */,
@@ -444,7 +463,7 @@
 				2DCBD2A5242327380028BFE4 /* UIViewController.swift in Sources */,
 				2DCBD2B324246A170028BFE4 /* SerieDetailsViewController.swift in Sources */,
 				2DCBD2B02423333E0028BFE4 /* Device.swift in Sources */,
-				2DCBD295242316E30028BFE4 /* SeriesCVCellPresenter.swift in Sources */,
+				2DCBD295242316E30028BFE4 /* SerieCVCellPresenter.swift in Sources */,
 				2DCBD2C024248E160028BFE4 /* SimilarSerie.swift in Sources */,
 				2D6F26222422EA17006B1D38 /* AppDelegate.swift in Sources */,
 				2DCBD2A124231F740028BFE4 /* SeriesListService.swift in Sources */,
@@ -466,6 +485,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D9CB2BD245E7D2900B9F803 /* SerieDetailsPresenterTests.swift in Sources */,
 				2D9963D12456578C004FCC4D /* SeriesListPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
