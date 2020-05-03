@@ -1,12 +1,16 @@
 # PopularTVSeries
-![Alt text](https://i.imgur.com/mCKq5im.gif)  
+
+| App Experience |
+| ------------------- |
+| ![Alt text](https://i.imgur.com/mCKq5im.gif) |
+
 This application displays to the user a list of popular TV series. More details are revealed on a new screen when selecting one of them.  
 It is fed with content from The Movie Database API.  
 The API documentation can be found here: ​https://developers.themoviedb.org/3.
 
 ## App Screenshots
-![Alt text](https://i.imgur.com/4xmMIiA.png)
-![Alt text](https://i.imgur.com/BWRoJgE.png)
+![Alt text](https://i.imgur.com/Phvxc1D.png)
+![Alt text](https://i.imgur.com/4rDeff1.png)
    
 Xcode 11.1  
 Swift 5
