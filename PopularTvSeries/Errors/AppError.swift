@@ -17,7 +17,7 @@ extension AppError: LocalizedError {
     var errorDescription: String? {
         switch self {
         case .generic:
-            return "Um problema inesperado ocorreu. Por favor, tente novamente."
+            return "An unexpected problem has occurred. Try again later."
         }
     }    
 }

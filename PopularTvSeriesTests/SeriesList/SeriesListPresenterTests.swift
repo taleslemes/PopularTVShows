@@ -80,76 +80,7 @@ final class PopularTvSeriesTests: XCTestCase {
         sut.fetchPopularSeriesFailed(error: AppError.generic)
         
         XCTAssertTrue(view.showErrorCalled)
-        XCTAssertEqual(view.errorMessagePassed, "Um problema inesperado ocorreu. Por favor, tente novamente.")
+        XCTAssertEqual(view.errorMessagePassed, "An unexpected problem has occurred. Try again later.")
     }
     
-}
-
-// MARK: SeriesListViewSpy
-
-fileprivate class SeriesListViewSpy: SeriesListView {
-    
-    private(set) var showLoaderCalled = false
-    func showLoader() {
-        showLoaderCalled = true
-    }
-    
-    private(set) var hideLoaderCalled = false
-    func hideLoader() {
-        hideLoaderCalled = true
-    }
-    
-    private(set) var showErrorCalled = false
-    private(set) var errorMessagePassed: String?
-    func showError(message: String) {
-        showErrorCalled = true
-        errorMessagePassed = message
-    }
-    
-    private(set) var updateSeriesListCalled = false
-    func updateSeriesList() {
-        updateSeriesListCalled = true
-    }
-    
-}
-
-// MARK: SeriesListServiceSpy
-
-fileprivate class SeriesListServiceSpy: SeriesListServiceInput {
-    var output: SeriesListServiceOutput?
-    
-    private(set) var fetchPopularSeriesCalled = false
-    private(set) var pageNumberPassed: Int?
-    func fetchPopularSeries(page: Int) {
-        fetchPopularSeriesCalled = true
-        pageNumberPassed = page
-    }
-    
-}
-
-// MARK: SeriesListRouterSpy
-
-fileprivate class SeriesListRouterSpy: SeriesListRoutering {
-    
-    private(set) var navigateToSerieDetailsSceneCalled = false
-    private(set) var serieIdPassed: Int?
-    func navigateToSerieDetailsScene(serieId: Int) {
-        navigateToSerieDetailsSceneCalled = true
-        serieIdPassed = serieId
-    }
-    
-}
-
-// MARK: Serie Extension
-
-extension Serie {
-    static func fixture(
-        id: Int = 0,
-        image: String = "image name",
-        title: String = "title",
-        firstAirDate: String = "10/10/10",
-        voteAverage: Double = 5
-    ) -> Serie {
-        return Serie(id: id, image: image, title: title, firstAirDate: firstAirDate, voteAverage: voteAverage)
-    }
 }

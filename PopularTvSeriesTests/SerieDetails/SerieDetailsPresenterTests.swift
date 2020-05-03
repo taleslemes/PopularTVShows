@@ -63,39 +63,39 @@ final class SerieDetailsPresentesTests: XCTestCase {
         sut.fetchSimilarSeriesFailed(error: AppError.generic)
         
         XCTAssertTrue(view.showErrorCalled)
-        XCTAssertEqual(view.errorMessagePassed, "Um problema inesperado ocorreu. Por favor, tente novamente.")
+        XCTAssertEqual(view.errorMessagePassed, "An unexpected problem has occurred. Try again later.")
     }
     
     func test_fetchSerieDetailsSucceeded_shouldViewSetTitle() {
-        sut.fetchSerieDetailsSucceeded(serieDetails: SerieDetails.fixture())
+        sut.fetchSerieDetailsSucceeded(serieDetails: SerieDetails.fixture(title: "title name"))
         
         XCTAssertTrue(view.setTitleCalled)
         XCTAssertEqual(view.titlePassed, "title name")
     }
     
     func test_fetchSerieDetailsSucceeded_shouldViewSetPosterImage() {
-        sut.fetchSerieDetailsSucceeded(serieDetails: SerieDetails.fixture())
+        sut.fetchSerieDetailsSucceeded(serieDetails: SerieDetails.fixture(image: "imageUrl"))
         
         XCTAssertTrue(view.setPosterImageCalled)
-        XCTAssertEqual(view.posterImagePassed, "\(Urls.imageBase)image name")
+        XCTAssertEqual(view.posterImagePassed, "\(Urls.imageBase)imageUrl")
     }
     
     func test_fetchSerieDetailsSucceeded_shouldViewSetOverview() {
-        sut.fetchSerieDetailsSucceeded(serieDetails: SerieDetails.fixture())
+        sut.fetchSerieDetailsSucceeded(serieDetails: SerieDetails.fixture(overview: "overview text"))
         
         XCTAssertTrue(view.setOverviewCalled)
         XCTAssertEqual(view.overviewPassed, "overview text")
     }
     
     func test_fetchSerieDetailsSucceeded_shouldViewSetVoteAverage() {
-          sut.fetchSerieDetailsSucceeded(serieDetails: SerieDetails.fixture())
+        sut.fetchSerieDetailsSucceeded(serieDetails: SerieDetails.fixture(voteAverage: 5.5))
           
           XCTAssertTrue(view.setVoteAverageCalled)
           XCTAssertEqual(view.voteAveragePassed, "Vote average: 5.5")
       }
     
     func test_fetchSerieDetailsSucceeded_givenFirstAirDateIsValid_shouldViewSetFirstAirDate() {
-          sut.fetchSerieDetailsSucceeded(serieDetails: SerieDetails.fixture())
+        sut.fetchSerieDetailsSucceeded(serieDetails: SerieDetails.fixture(firstAirDate: "2010/10/10"))
           
           XCTAssertTrue(view.setFirstAirDateCalled)
           XCTAssertEqual(view.firstAirDatePassed, "First air date: Oct 10, 2010")
@@ -109,7 +109,8 @@ final class SerieDetailsPresentesTests: XCTestCase {
     }
     
     func test_fetchSerieDetailsSucceeded_shouldViewSetGenres() {
-        sut.fetchSerieDetailsSucceeded(serieDetails: SerieDetails.fixture())
+        sut.fetchSerieDetailsSucceeded(serieDetails: SerieDetails.fixture(genres: [Genre(genre: "genre one"),
+                                                                                   Genre(genre: "genre two")]))
         
         XCTAssertTrue(view.setGenresCalled)
         XCTAssertEqual(view.genresPassed, "Genre: genre one, genre two")
@@ -121,11 +122,11 @@ final class SerieDetailsPresentesTests: XCTestCase {
         XCTAssertTrue(view.hideLoaderCalled)
     }
     
-    func test_fetchSerieDetailsFailed_shouldViewShowError() {
+    func test_fetchSerieDetailsFailed_shouldViewShowErrorWithMessage() {
         sut.fetchSerieDetailsFailed(error: AppError.generic)
         
         XCTAssertTrue(view.showErrorCalled)
-        XCTAssertEqual(view.errorMessagePassed, "Um problema inesperado ocorreu. Por favor, tente novamente.")
+        XCTAssertEqual(view.errorMessagePassed, "An unexpected problem has occurred. Try again later.")
     }
     
 }
@@ -200,45 +201,4 @@ final class SerieDetailsViewSpy: SerieDetailsView {
         similarSeriesPassed = text
     }
     
-}
-
-// MARK: SerieDetailsServiceSpy
-
-final class SerieDetailsServiceSpy: SerieDetailsServiceInput {
-    var output: SerieDetailsServiceOutput?
-    
-    private(set) var fetchSerieDetailsCalled = false
-    func fetchSerieDetails() {
-        fetchSerieDetailsCalled = true
-    }
-    
-    private(set) var fetchSimilarSeriesCalled = false
-    func fetchSimilarSeries() {
-        fetchSimilarSeriesCalled = true
-    }
-    
-}
-
-// MARK: SimilarSerie Extension
-
-extension SimilarSerie {
-    static func fixture(title: String = "") -> SimilarSerie {
-        return SimilarSerie(title: title)
-    }
-}
-
-// MARK: SerieDetails Extension
-
-extension SerieDetails {
-    static func fixture(
-        image: String = "image name",
-        title: String = "title name",
-        firstAirDate: String = "2010/10/10",
-        voteAverage: Double = 5.5,
-        overview: String = "overview text",
-        genres: [Genre] = [Genre(genre: "genre one"),
-                           Genre(genre: "genre two")]
-    ) -> SerieDetails {
-        return SerieDetails(image: image, title: title, firstAirDate: firstAirDate, voteAverage: voteAverage, overview: overview, genres: genres)
-    }
 }

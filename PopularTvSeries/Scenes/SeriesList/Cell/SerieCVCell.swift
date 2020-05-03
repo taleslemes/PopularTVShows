@@ -29,7 +29,7 @@ final class SerieCVCell: UICollectionViewCell {
         posterImageView.cornerOn(.top, radius: 20)
         setShadow()
         
-        if Device.isIphoneSE {
+        if Device.isIphone5 {
             posterImageViewHeightConstraint.isActive = false
         }
     }
