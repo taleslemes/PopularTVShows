@@ -47,8 +47,7 @@ final class SerieDetailsPresentesTests: XCTestCase {
     func test_fetchSimilarSeriesSucceeded_shouldViewSetSimilarSeries() {
         sut.fetchSimilarSeriesSucceeded(similarSeries: [SimilarSerie.fixture(title: "Captain America"),
                                                         SimilarSerie.fixture(title: "Iron Man"),
-                                                        SimilarSerie.fixture(title: "Thor")
-        ])
+                                                        SimilarSerie.fixture(title: "Thor")])
         
         XCTAssertTrue(view.setSimilarSeriesCalled)
         XCTAssertEqual(view.similarSeriesPassed, "Similar TV Shows: Captain America, Iron Man, Thor")
