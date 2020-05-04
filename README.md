@@ -1,5 +1,4 @@
 # PopularTVSeries
-
 | App Experience |
 | ------------------- |
 | ![Alt text](https://i.imgur.com/mCKq5im.gif) |
@@ -18,14 +17,15 @@ Swift 5
 ## Architecture
 
 ### MVP (Clean Architecture)
-Model-View-Presenter architectural pattern is used in this project.  
+Model-View-Presenter architectural pattern was applied in this project.  
 The application was developed aiming at good programming practices and clean code.  
 A Service Layer is used in order to access the remote data found in The Movie Database API. Furthermore, the app navigation is handled using a Router component.
 
 ## Layout
-
 The layout was designed using XIBs and the screens were developed to fit well on different iPhone models.
+
+## Unit Tests
+Once the Presenter is the most critical layer found in each scene, all of them were fully tested, reaching a code coverage of 100%.
 
 ## External Dependencies
 There are no external dependencies in this application.
-
