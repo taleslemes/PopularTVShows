@@ -81,9 +81,9 @@ extension SerieDetailsViewController: SerieDetailsView {
         showAlert(message: message)
     }
     
-    func setPosterImage(with image: String) {
+    func setPosterImage(with imageUrl: String) {
         DispatchQueue.main.async {
-            self.posterImageView.loadImage(from: image)
+            self.posterImageView.loadImage(from: imageUrl)
         }
     }
     

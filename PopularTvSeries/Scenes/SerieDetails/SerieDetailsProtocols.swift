@@ -25,7 +25,7 @@ protocol SerieDetailsView: AnyObject {
     func showLoader()
     func hideLoader()
     func showError(message: String)
-    func setPosterImage(with image: String)
+    func setPosterImage(with imageUrl: String)
     func setVoteAverage(with text: String)
     func setFirstAirDate(with text: String)
     func setOverview(with text: String)

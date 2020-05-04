@@ -43,7 +43,7 @@ final class SerieCVCellPresenter {
     }
     
     private func setPosterImage() {
-        view?.setPosterImage(with: Urls.imageBase + model.image)
+        view?.setPosterImage(with: Urls.imageBase + model.imageUrl)
     }
     
     private func setFirstAirDate() {

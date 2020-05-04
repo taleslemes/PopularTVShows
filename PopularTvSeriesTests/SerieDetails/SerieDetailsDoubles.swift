@@ -37,14 +37,13 @@ extension SimilarSerie {
 // MARK: SerieDetails Extension
 
 extension SerieDetails {
-    static func fixture(
-        image: String = "",
-        title: String = "",
-        firstAirDate: String = "",
-        voteAverage: Double = 0,
-        overview: String = "",
-        genres: [Genre] = []
+    static func fixture(imageUrl: String = "",
+                        title: String = "",
+                        firstAirDate: String = "",
+                        voteAverage: Double = 0,
+                        overview: String = "",
+                        genres: [Genre] = []
     ) -> SerieDetails {
-        return SerieDetails(image: image, title: title, firstAirDate: firstAirDate, voteAverage: voteAverage, overview: overview, genres: genres)
+        return SerieDetails(imageUrl: imageUrl, title: title, firstAirDate: firstAirDate, voteAverage: voteAverage, overview: overview, genres: genres)
     }
 }

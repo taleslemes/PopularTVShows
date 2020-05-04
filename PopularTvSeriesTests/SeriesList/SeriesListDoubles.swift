@@ -64,16 +64,48 @@ final class SeriesListRouterSpy: SeriesListRoutering {
     
 }
 
+// MARK: SerieCVCellViewSpy
+
+final class SerieCVCellViewSpy: SerieCVCellView {
+    
+    private(set) var setPosterImageCalled = false
+    private(set) var posterImageUrlPassed: String?
+    func setPosterImage(with imageUrl: String) {
+        setPosterImageCalled = true
+        posterImageUrlPassed = imageUrl
+    }
+    
+    private(set) var setTitleCalled = false
+    private(set) var titlePassed: String?
+    func setTitle(with text: String) {
+        setTitleCalled = true
+        titlePassed = text
+    }
+    
+    private(set) var setVoteAverageCalled = false
+    private(set) var voteAveragePassed: String?
+    func setVoteAverage(with text: String) {
+        setVoteAverageCalled = true
+        voteAveragePassed = text
+    }
+    
+    private(set) var setFirstAirDateCalled = false
+    private(set) var firstAirDatePassed: String?
+    func setFirstAirDate(with text: String) {
+        setFirstAirDateCalled = true
+        firstAirDatePassed = text
+    }
+    
+}
+
 // MARK: Serie Extension
 
 extension Serie {
-    static func fixture(
-        id: Int = 0,
-        image: String = "",
-        title: String = "",
-        firstAirDate: String = "",
-        voteAverage: Double = 0
-    ) -> Serie {
-        return Serie(id: id, image: image, title: title, firstAirDate: firstAirDate, voteAverage: voteAverage)
+    static func fixture(id: Int = 0,
+                        imageUrl: String = "",
+                        title: String = "",
+                        firstAirDate: String = "",
+                        voteAverage: Double = 0) -> Serie {
+        return Serie(id: id, imageUrl: imageUrl, title: title, firstAirDate: firstAirDate, voteAverage: voteAverage)
     }
 }

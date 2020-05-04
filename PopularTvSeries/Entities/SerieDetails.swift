@@ -9,7 +9,7 @@
 import Foundation
 
 struct SerieDetails: Decodable {
-    let image: String
+    let imageUrl: String
     let title: String
     let firstAirDate: String
     let voteAverage: Double
@@ -19,7 +19,7 @@ struct SerieDetails: Decodable {
     enum CodingKeys: String, CodingKey {
         case genres, overview
         case title = "name"
-        case image = "poster_path"
+        case imageUrl = "poster_path"
         case firstAirDate = "first_air_date"
         case voteAverage = "vote_average"
     }

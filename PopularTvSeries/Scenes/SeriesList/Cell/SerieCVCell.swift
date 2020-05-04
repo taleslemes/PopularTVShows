@@ -46,8 +46,8 @@ final class SerieCVCell: UICollectionViewCell {
 
 extension SerieCVCell: SerieCVCellView {
     
-    func setPosterImage(with imageName: String) {
-        posterImageView.loadImage(from: imageName)
+    func setPosterImage(with imageUrl: String) {
+        posterImageView.loadImage(from: imageUrl)
     }
     
     func setTitle(with text: String) {

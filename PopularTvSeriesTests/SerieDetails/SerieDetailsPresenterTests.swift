@@ -74,10 +74,10 @@ final class SerieDetailsPresentesTests: XCTestCase {
     }
     
     func test_fetchSerieDetailsSucceeded_shouldViewSetPosterImage() {
-        sut.fetchSerieDetailsSucceeded(serieDetails: SerieDetails.fixture(image: "imageUrl"))
+        sut.fetchSerieDetailsSucceeded(serieDetails: SerieDetails.fixture(imageUrl: "imageUrl"))
         
         XCTAssertTrue(view.setPosterImageCalled)
-        XCTAssertEqual(view.posterImagePassed, "\(Urls.imageBase)imageUrl")
+        XCTAssertEqual(view.posterImageUrlPassed, "\(Urls.imageBase)imageUrl")
     }
     
     func test_fetchSerieDetailsSucceeded_shouldViewSetOverview() {
@@ -153,10 +153,10 @@ final class SerieDetailsViewSpy: SerieDetailsView {
     }
     
     private(set) var setPosterImageCalled = false
-    private(set) var posterImagePassed: String?
+    private(set) var posterImageUrlPassed: String?
     func setPosterImage(with image: String) {
         setPosterImageCalled = true
-        posterImagePassed = image
+        posterImageUrlPassed = image
     }
     
     private(set) var setVoteAverageCalled = false

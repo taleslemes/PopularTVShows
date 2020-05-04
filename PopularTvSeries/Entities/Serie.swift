@@ -14,7 +14,7 @@ struct SeriesResponse: Decodable {
 
 struct Serie: Decodable {
     let id: Int
-    let image: String
+    let imageUrl: String
     let title: String
     let firstAirDate: String
     let voteAverage: Double
@@ -22,7 +22,7 @@ struct Serie: Decodable {
     enum CodingKeys: String, CodingKey {
         case id
         case title = "name"
-        case image = "poster_path"
+        case imageUrl = "poster_path"
         case firstAirDate = "first_air_date"
         case voteAverage = "vote_average"
     }
