@@ -34,7 +34,7 @@ final class SerieCVCellPresenterTests: XCTestCase {
         sut.attachView(view)
         
         XCTAssertTrue(view.setPosterImageCalled)
-        XCTAssertEqual(view.posterImageUrlPassed, "\(Urls.imageBase)imageUrl")
+        XCTAssertEqual(view.posterImageUrlPassed, "https://image.tmdb.org/t/p/w500/imageUrl")
     }
     
     func test_attachView_givenFirstAirDateIsValid_shouldViewSetFirstAirDate() {

@@ -9,39 +9,38 @@
 import Foundation
 
 protocol APIProvider: AnyObject {
-    func request<T>(url: String, success: @escaping (T) -> Void, failure: @escaping (Error) -> Void) where T : Decodable
+    func request<T: Decodable>(url: String, completion: @escaping (Result<T, Error>) -> Void)
 }
 
 final class APICore: APIProvider {
     
-    func request<T>(url: String, success: @escaping (T) -> Void, failure: @escaping (Error) -> Void) where T : Decodable {
+    func request<T>(url: String, completion: @escaping (Result<T, Error>) -> Void) where T : Decodable {
         guard let request = makeRequest(url: url) else { return }
         
-        URLSession.shared.dataTask(with: request) { (data, response, error) in
-            guard let response = response as? HTTPURLResponse else {
-                failure(AppError.generic)
+        URLSession.shared.dataTask(with: request) { (data, urlResponse, error) in
+            guard let urlResponse = urlResponse as? HTTPURLResponse else {
+                completion(.failure(AppError.generic))
                 return
             }
             
-            switch response.statusCode {
+            switch urlResponse.statusCode {
             case 400..<600:
-                failure(AppError.generic)
+                completion(.failure(AppError.generic))
             default:
                 guard let data = data else { return }
                 
                 do {
                     let object = try JSONDecoder().decode(T.self, from: data)
-                    success(object)
+                    completion(.success(object))
                 } catch {
-                    failure(AppError.generic)
+                    completion(.failure(AppError.generic))
                 }
             }
         }.resume()
     }
     
     private func makeRequest(url: String) -> URLRequest? {
-        let currentUrl = url
-        guard let `url` = URL(string: currentUrl) else { return nil }
+        guard let url = URL(string: url) else { return nil }
         
         var request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 10)
         

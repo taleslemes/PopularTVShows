@@ -59,7 +59,7 @@ extension SerieDetailsPresenter: SerieDetailsServiceOutput {
         
     func fetchSerieDetailsSucceeded(serieDetails: SerieDetails) {
         view?.setTitle(with: serieDetails.title)
-        view?.setPosterImage(with: Urls.imageBase + serieDetails.imageUrl)
+        view?.setPosterImage(with: Paths.imageBase(serieDetails.imageUrl).url)
         view?.setOverview(with: serieDetails.overview)
         view?.setVoteAverage(with: "Vote average: \(serieDetails.voteAverage)")
         view?.setFirstAirDate(with: "First air date: \(serieDetails.firstAirDate.formattedDate())")

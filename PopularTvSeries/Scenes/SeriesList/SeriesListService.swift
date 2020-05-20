@@ -20,10 +20,13 @@ final class SeriesListService: SeriesListServiceInput {
     // MARK: SeriesListServiceInput Interface Implementation
     
     func fetchPopularSeries(page: Int) {
-        api.request(url: Urls.popularSeriesBase + "\(page)", success: { [output] (series: SeriesResponse) in
-            output?.fetchPopularSeriesSucceeded(series: series.results)
-        }) { [output] (error) in
-            output?.fetchPopularSeriesFailed(error: error)
+        api.request(url: Paths.popularSeries("\(page)").url) { [output] (response: Result<SeriesResponse, Error>) in
+            switch response {
+            case .success(let seriesResponse):
+                output?.fetchPopularSeriesSucceeded(series: seriesResponse.results)
+            case .failure(let error):
+                output?.fetchPopularSeriesFailed(error: error)
+            }
         }
     }
     

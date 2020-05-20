@@ -77,7 +77,7 @@ final class SerieDetailsPresentesTests: XCTestCase {
         sut.fetchSerieDetailsSucceeded(serieDetails: SerieDetails.fixture(imageUrl: "imageUrl"))
         
         XCTAssertTrue(view.setPosterImageCalled)
-        XCTAssertEqual(view.posterImageUrlPassed, "\(Urls.imageBase)imageUrl")
+        XCTAssertEqual(view.posterImageUrlPassed, "https://image.tmdb.org/t/p/w500/imageUrl")
     }
     
     func test_fetchSerieDetailsSucceeded_shouldViewSetOverview() {

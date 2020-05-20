@@ -8,12 +8,26 @@
 
 import Foundation
 
-enum Urls {
+enum Paths {
     static let apiKey = "5343685ad7ec8de95ea3e9894b3b092a"
-    static let popularSeriesBase = "https://api.themoviedb.org/3/tv/popular?api_key=" + Urls.apiKey + "&language=en-US&page="
-    static let imageBase = "https://image.tmdb.org/t/p/w500/"
-    static let serieDetailsPart1 = "https://api.themoviedb.org/3/tv/"
-    static let serieDetailsPart2 = "?api_key=" + Urls.apiKey + "&language=en-US"
-    static let similarSeriesPart1 = "https://api.themoviedb.org/3/tv/"
-    static let similarSeriesPart2 = "/similar?api_key=" + Urls.apiKey + "&language=en-US&page=1"
+    static let baseUrl = "https://api.themoviedb.org/3/tv/"
+    
+    case popularSeries(String)
+    case imageBase(String)
+    case serieDetails(String)
+    case similarSeries(String)
+    
+    var url: String {
+        switch self {
+        case .popularSeries(let pageNumber):
+            return Paths.baseUrl + "popular?api_key=" + Paths.apiKey + "&language=en-US&page=" + pageNumber
+        case .serieDetails(let serieId):
+            return Paths.baseUrl + serieId + "?api_key=" + Paths.apiKey + "&language=en-US"
+        case .similarSeries(let serieId):
+            return Paths.baseUrl + serieId + "/similar?api_key=" + Paths.apiKey + "&language=en-US&page=1"
+        case .imageBase(let imageUrl):
+            return "https://image.tmdb.org/t/p/w500/" + imageUrl
+        }
+    }
+    
 }

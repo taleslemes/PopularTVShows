@@ -22,18 +22,24 @@ final class SerieDetailsService: SerieDetailsServiceInput {
     // MARK: SeriesDetailsServiceInput Interface Implementation
     
     func fetchSerieDetails() {
-        api.request(url: Urls.serieDetailsPart1 + "\(serieId)" + Urls.serieDetailsPart2, success: { [output] (serieDetail: SerieDetails) in
-            output?.fetchSerieDetailsSucceeded(serieDetails: serieDetail)
-        }) { [output] (error) in
-            output?.fetchSerieDetailsFailed(error: error)
+        api.request(url: Paths.serieDetails("\(serieId)").url) { [output] (response: Result<SerieDetails, Error>) in
+            switch response {
+            case .success(let serieDetails):
+                output?.fetchSerieDetailsSucceeded(serieDetails: serieDetails)
+            case .failure(let error):
+                output?.fetchSerieDetailsFailed(error: error)
+            }
         }
     }
     
     func fetchSimilarSeries() {
-        api.request(url: Urls.similarSeriesPart1 + "\(serieId)" + Urls.similarSeriesPart2, success: { [output] (similarSeries: SimilarSeriesResponse) in
-            output?.fetchSimilarSeriesSucceeded(similarSeries: similarSeries.results)
-        }) { [output] (error) in
-            output?.fetchSerieDetailsFailed(error: error)
+        api.request(url: Paths.similarSeries("\(serieId)").url) { [output] (response: Result<[SimilarSerie], Error>) in
+            switch response {
+            case .success(let similarSeries):
+                output?.fetchSimilarSeriesSucceeded(similarSeries: similarSeries)
+            case .failure(let error):
+                output?.fetchSimilarSeriesFailed(error: error)
+            }
         }
     }
     

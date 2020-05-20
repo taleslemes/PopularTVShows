@@ -13,11 +13,12 @@ enum AppError {
 }
 
 extension AppError: LocalizedError {
-    
+ 
     var errorDescription: String? {
         switch self {
         case .generic:
             return "An unexpected problem has occurred. Try again later."
         }
-    }    
+    }
+    
 }
